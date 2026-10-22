@@ -115,6 +115,10 @@
     "src/train.py": {
       "bytes": 14265,
       "sha256": "863ccf7873ab5075dcc955f0e80257d6650993b569b00d1c09fb715329a32629"
+    },
+    "results/public_clone_reproduction.json": {
+      "bytes": 1788,
+      "sha256": "b5df7b05ac8894309dd0908784ea6760aee2b1092931acb6d0e18d2ae911998c"
     }
   },
   "note": "SHA-256 of curated files; this manifest excludes itself and ignored local runs."

@@ -1,0 +1,41 @@
+{
+  "cloned_commit": "3530ed9ca0e74ee78461828e14d9bb285254e99b",
+  "public_access_without_authentication": true,
+  "all_curated_file_hashes_verified_after_clone": true,
+  "predictions_match_original_frozen_run": true,
+  "validation": {
+    "protocol": "dase7506-mp2-open-hard-verifier-v5",
+    "split": "validation",
+    "correct": 746,
+    "n": 798,
+    "accuracy": 93.48370927318295,
+    "scoring_seconds": 0.032720999999583,
+    "external_prediction_seconds": 0.3487969999987399,
+    "external_scoring_seconds": 0.15509490000113146,
+    "external_total_seconds": 0.5038918999998714,
+    "reference_cpu_measurement": false,
+    "inference_asset_bytes": 9089,
+    "cpu_numeric_threads_limit": 4,
+    "predictions_sha256": "90f9b33e76728f76269b96dd9ab6324713d215a43d59511456b2917535670371",
+    "official_score_sha256": "62013007b2223240e79b070a73fbb299348e8c5e61c9ec033bbf3087524198ab",
+    "timing_includes_startup_imports_loading_preprocessing": true
+  },
+  "test": {
+    "protocol": "dase7506-mp2-open-hard-verifier-v5",
+    "split": "test",
+    "correct": 386,
+    "n": 467,
+    "accuracy": 82.65524625267666,
+    "scoring_seconds": 0.022038400000383263,
+    "external_prediction_seconds": 0.27635360000022047,
+    "external_scoring_seconds": 0.15128080000067712,
+    "external_total_seconds": 0.4276344000008976,
+    "reference_cpu_measurement": false,
+    "inference_asset_bytes": 9089,
+    "cpu_numeric_threads_limit": 4,
+    "predictions_sha256": "9608ea76bbeda99abee82c6fa07ce6c1a4c0f10da5b82d9cf26fdc550e1eb91a",
+    "official_score_sha256": "5ad80d53502a5a3d7b3f8bc413c8c43375d52139040f950a17d26734e8bbcff6",
+    "timing_includes_startup_imports_loading_preprocessing": true
+  },
+  "evaluation_purpose": "Artifact reproduction only; no fitting, tuning or model comparison."
+}
