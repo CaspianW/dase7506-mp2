@@ -1,0 +1,121 @@
+{
+  "files": {
+    ".gitattributes": {
+      "bytes": 61,
+      "sha256": "9fde02f966ed4c5d3e66ece7783e7b9b6bd47e7c76bb87c58ad9682a44778d39"
+    },
+    ".gitignore": {
+      "bytes": 91,
+      "sha256": "0ef9ba3e22556f5d21a8e2aaf6bac059af06a1246596af6e2f36e46e30600f80"
+    },
+    "checkpoint/config.json": {
+      "bytes": 561,
+      "sha256": "cceb10935f8363f25b6ef41bfbc47a54d64a81651528ae396ed0b13a2935ab49"
+    },
+    "checkpoint/weights.npz": {
+      "bytes": 8528,
+      "sha256": "88c1f020522b0937a42e871773599bb025b21da7e81fbf8ad09f449c17b7b85f"
+    },
+    "licenses/data_LICENSE.txt": {
+      "bytes": 1062,
+      "sha256": "86bbb73e855821d7c401912fd4bf82e34313e6e3b6fd6f909f2b6cc9e209a53b"
+    },
+    "licenses/data_NOTICE.txt": {
+      "bytes": 1066,
+      "sha256": "d577cdf7202ae22f2b19ace348b0ec69958a59aaf51d30cdab902bf7c1e67d78"
+    },
+    "README.md": {
+      "bytes": 7277,
+      "sha256": "a7f276112a39fcb1a3164732ca565c53aa130603e93063ba0253a53cb689d6f8"
+    },
+    "requirements-train.txt": {
+      "bytes": 75,
+      "sha256": "4ae640e62c55986ec256bbfedd59736079663e85e23a9d16334947ae8342e092"
+    },
+    "requirements.txt": {
+      "bytes": 13,
+      "sha256": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7"
+    },
+    "results/cv_surface.json": {
+      "bytes": 1978,
+      "sha256": "8facf8e2015d1d70b508761ef10b4a4411105221267c3380e79dffc0cd4f675f"
+    },
+    "results/cv_without_numeric.json": {
+      "bytes": 1979,
+      "sha256": "1d7fcc9d7f5d06902ceedb3ff41feaff905effb433af454b2fd7d91cbacfcce5"
+    },
+    "results/experiments.csv": {
+      "bytes": 204,
+      "sha256": "4ce180d16a82349c29f26425d709815c5dc6e04c51562b0ef86dd66ba0c71f9e"
+    },
+    "results/protocol.json": {
+      "bytes": 308821,
+      "sha256": "b563fb3e18995a2805f29f62e0208917d4a4c1cc36b64a167f45f0efdf62ad26"
+    },
+    "results/reproduction.json": {
+      "bytes": 1401,
+      "sha256": "6d544a94a870fd26ca9830a0f0985c41d641a18a2a1eb67ccd18849eeba6edbf"
+    },
+    "results/source_provenance.json": {
+      "bytes": 1186,
+      "sha256": "9389cb3ad8c7f47a32acf1ca8b8b5876c4dba29f5dc50547e65181f52f123346"
+    },
+    "results/test_score.json": {
+      "bytes": 179,
+      "sha256": "60d224e8271fa52ebac9800bea9e2959ef31332b73323b8d9ceff949ff544b5e"
+    },
+    "results/training.json": {
+      "bytes": 2015,
+      "sha256": "347cd66195bdf7b85f94b821ad979f41ad9de28dd09639b870a1262c71419fd0"
+    },
+    "results/validation_score.json": {
+      "bytes": 185,
+      "sha256": "c2c75f080cbec8c022dda7a1dc3afff3ba90695e9cfe7884eea2f5659fbcfd7f"
+    },
+    "src/common.py": {
+      "bytes": 4192,
+      "sha256": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c"
+    },
+    "src/cross_validate.py": {
+      "bytes": 3515,
+      "sha256": "7a6b828a0071ea6409335e0c6d04ef46e88195d7604ea8818c1e35fce9856d3c"
+    },
+    "src/evaluate.py": {
+      "bytes": 3327,
+      "sha256": "d2e6924651a1329d57f8e8c0d1fdaecfb557c6acb44987fe5d2fc4ad13a75f4e"
+    },
+    "src/predict.py": {
+      "bytes": 1680,
+      "sha256": "e7a627fbdc9ef8d4ab3189a6fa5ac02d56ae703ccd1a81507aea0bd66e042162"
+    },
+    "src/question_operation_features.py": {
+      "bytes": 3829,
+      "sha256": "eb75e1b07839c0040823eada031fbca5adbd5e6f452784985aa4bc0f33166238"
+    },
+    "src/score_predictions.py": {
+      "bytes": 1283,
+      "sha256": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960"
+    },
+    "src/selection_utils.py": {
+      "bytes": 3544,
+      "sha256": "3eb0900df892afd59776f11e3e4c1dce5d34fb969acaef681a5bdb39d98bbb14"
+    },
+    "src/submission.py": {
+      "bytes": 1863,
+      "sha256": "7df31d4b4f6034169fb01f18d8827a1d5ddeefd415033f1ac8d2a95bd3fa871e"
+    },
+    "src/submission_answer_groups.py": {
+      "bytes": 3411,
+      "sha256": "0d04292529bad27d643585560da52a546501747f54eccaae515df9a0b7472136"
+    },
+    "src/submission_ensemble.py": {
+      "bytes": 878,
+      "sha256": "2912cde5776bbd7bb4ccee8288491334293b76bf335dc8ee00498f5354732ad8"
+    },
+    "src/train.py": {
+      "bytes": 14265,
+      "sha256": "863ccf7873ab5075dcc955f0e80257d6650993b569b00d1c09fb715329a32629"
+    }
+  },
+  "note": "SHA-256 of curated files; this manifest excludes itself and ignored local runs."
+}

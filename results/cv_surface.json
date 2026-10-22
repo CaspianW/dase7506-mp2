@@ -1,0 +1,97 @@
+{
+  "pooled": {
+    "overall": {
+      "correct": 3505,
+      "n": 3804,
+      "accuracy": 92.13985278654049
+    },
+    "disagreement": {
+      "correct": 1392,
+      "n": 1691,
+      "accuracy": 82.31815493790657
+    }
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "metrics": {
+        "overall": {
+          "correct": 691,
+          "n": 761,
+          "accuracy": 90.80157687253613
+        },
+        "disagreement": {
+          "correct": 268,
+          "n": 338,
+          "accuracy": 79.28994082840237
+        }
+      }
+    },
+    {
+      "fold": 1,
+      "metrics": {
+        "overall": {
+          "correct": 717,
+          "n": 761,
+          "accuracy": 94.21813403416557
+        },
+        "disagreement": {
+          "correct": 294,
+          "n": 338,
+          "accuracy": 86.98224852071006
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "metrics": {
+        "overall": {
+          "correct": 708,
+          "n": 761,
+          "accuracy": 93.03547963206307
+        },
+        "disagreement": {
+          "correct": 285,
+          "n": 338,
+          "accuracy": 84.31952662721893
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "metrics": {
+        "overall": {
+          "correct": 707,
+          "n": 761,
+          "accuracy": 92.90407358738501
+        },
+        "disagreement": {
+          "correct": 285,
+          "n": 339,
+          "accuracy": 84.070796460177
+        }
+      }
+    },
+    {
+      "fold": 4,
+      "metrics": {
+        "overall": {
+          "correct": 682,
+          "n": 760,
+          "accuracy": 89.73684210526316
+        },
+        "disagreement": {
+          "correct": 260,
+          "n": 338,
+          "accuracy": 76.92307692307692
+        }
+      }
+    }
+  ],
+  "training_fits": 5,
+  "protocol_sha256": "a0c5d74289b7ad48ddf8e3ed0a0a0e067d28efbbd03871c300df57b3d31695c5",
+  "coordinator_holdout_used": false,
+  "official_validation_used": false,
+  "official_test_used": false,
+  "numeric_surface_features": true
+}

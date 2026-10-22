@@ -1,0 +1,45 @@
+{
+  "full_training_weights_bit_identical": true,
+  "checkpoint_config_semantically_identical": true,
+  "cv_surface_scores_bit_identical_to_research_archive": true,
+  "full_training_rows": 4755,
+  "development_rows": 3804,
+  "development_hard_questions": 1691,
+  "completed_packaging_classifier_fits": 16,
+  "fit_breakdown": {
+    "full_training_reproduction": 1,
+    "surface_cv": 5,
+    "baseline_cv_completed_but_not_saved_due_to_missing_output_directory": 5,
+    "baseline_cv_saved_after_directory_fix": 5
+  },
+  "inference_assets_uncompressed_bytes": 9089,
+  "cpu_contract_audit": {
+    "input_contract_checks": {
+      "checkpoint_reload": true,
+      "new_ids_and_reordered_subset": true,
+      "empty_input": true,
+      "python_integer_choices": true,
+      "candidate_permutation": true
+    },
+    "reference_reads_blocked": true,
+    "noncheckpoint_array_reads_blocked": true,
+    "gpu_frameworks_loaded": false
+  },
+  "numeric_threadpools": [
+    {
+      "api": "blas",
+      "threads": 4,
+      "version": "0.3.30"
+    }
+  ],
+  "official_tools_byte_identical_to_course_commit": "bb801f4f2e7629d270df765ab12c333b2dc616bb",
+  "dependency_versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "scikit-learn": "1.7.2",
+    "threadpoolctl": "3.6.0"
+  },
+  "validation_or_test_targets_used_for_fitting": false,
+  "no_new_model_selected_during_packaging": true
+}

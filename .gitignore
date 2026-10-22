@@ -1,0 +1,10 @@
+.venv/
+.venv-train/
+__pycache__/
+*.py[cod]
+runs/
+upstream/
+data/
+*.log
+.DS_Store
+Thumbs.db
