@@ -48,7 +48,7 @@ The test command has not been run for L. Use a fresh output directory for every 
 .venv\Scripts\python.exe -B src/predict.py --method src/submission.py --checkpoint checkpoint --split audit --data-dir PATH_TO_AUDIT_INPUTS --output runs/audit-predictions.json
 ```
 
-Numeric libraries are limited to four threads and GPU visibility is disabled. The frozen checkpoint is 9,157 bytes, below the 16 MiB asset limit. The course requires prediction plus scoring within 30 seconds on its reference Xeon Platinum 8457C. Local CPU timings do not establish reference-machine eligibility.
+Numeric libraries are limited to four threads and GPU visibility is disabled. The active L checkpoint is 9,157 bytes; all packaged checkpoints total 18,246 bytes when the historical S copy is also counted. Both are below the 16 MiB asset limit. The course requires prediction plus scoring within 30 seconds on its reference Xeon Platinum 8457C. Local CPU timings do not establish reference-machine eligibility.
 
 ## Reproduce training
 
