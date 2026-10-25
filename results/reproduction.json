@@ -1,0 +1,106 @@
+{
+  "passed": true,
+  "source_freeze_commit": "07608ca8a9a37c2ed3cec03fd90fd03510a7f7a2",
+  "candidate_branch": "local/qualified-arithmetic-v2",
+  "public_base_commit": "a1973666c71c4ba72a1183b337043f8fb050c06e",
+  "full_training": {
+    "passed": true,
+    "training_questions": 4755,
+    "fits": {
+      "S": 1,
+      "residual": 1
+    },
+    "all_checkpoint_bytes_identical": true,
+    "all_coefficients_identical": true,
+    "checkpoint_sha256": {
+      "weights.npz": "9f696058356824d098ffabe5a069dcbf43d6cf1a7861d087dc0af793931033b2",
+      "config.json": "bbcd6cab9b7e40e649b4e160c1a9726a7f89ae1d0d2dc90fa9d4c05f5aefd6cf"
+    },
+    "fit_seconds": 10.358640800000103,
+    "source_freeze_commit": "07608ca8a9a37c2ed3cec03fd90fd03510a7f7a2",
+    "official_validation_used_for_fitting": false,
+    "official_test_used": false
+  },
+  "original_fivefold": {
+    "passed": true,
+    "fits": {
+      "S": 5,
+      "residual": 5
+    },
+    "models": {
+      "S": {
+        "pooled_scores_shape": [
+          3804,
+          4
+        ],
+        "all_pooled_scores_exact": true,
+        "max_abs_score_error": 0.0,
+        "all5fold_checkpoint_coefficients_exact": true
+      },
+      "local_arithmetic": {
+        "pooled_scores_shape": [
+          3804,
+          4
+        ],
+        "all_pooled_scores_exact": true,
+        "max_abs_score_error": 0.0,
+        "all5fold_checkpoint_coefficients_exact": true
+      }
+    },
+    "protocol_semantically_identical_to_frozen_research_protocol": true,
+    "source_freeze_commit": "07608ca8a9a37c2ed3cec03fd90fd03510a7f7a2",
+    "validation_used": false,
+    "test_used": false
+  },
+  "validation_parity": {
+    "passed": true,
+    "validation_ids_exact": true,
+    "all798choices_exact": true,
+    "prior_snapshot_predictions_sha256": "cb1e2c30dc9c16393d675029a2ec5769c08d3825ef85b4c0d5bd00d7ed5125c7",
+    "fresh_predictions_sha256": "7e3d7739a0b7de4f720975433b3c22003f065ecdd7a03639b81546c822d6e951",
+    "reference_scoring_calls_for_this_check": 0
+  },
+  "official_validation": {
+    "correct": 751,
+    "n": 798,
+    "accuracy": 94.11027568922306,
+    "external_prediction_seconds": 1.064353900000242,
+    "external_scoring_seconds": 0.4516280999996525,
+    "external_total_seconds": 1.5159819999998945,
+    "reference_cpu_measurement": false
+  },
+  "training_fits_this_reproduction": {
+    "S": 6,
+    "residual": 6,
+    "total": 12
+  },
+  "new_official_validation_evaluations_by_executor": 1,
+  "new_CPUguards_by_executor": 1,
+  "official_test_evaluations": 0,
+  "selected_inference_asset_bytes": 9157,
+  "all_packaged_checkpoint_bytes_conservative": 18246,
+  "source_sha256": {
+    "arithmetic_features.py": "97fd69713c7a73e513cacb1c01bc38bf6dad82dde80be746bc7492fb1c5e7e6a",
+    "common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "cross_validate.py": "d5d2abfc532cbd1bcdfb19a220518e20b6db5706409c4a47c1dc76e4a0ec9178",
+    "evaluate.py": "d2e6924651a1329d57f8e8c0d1fdaecfb557c6acb44987fe5d2fc4ad13a75f4e",
+    "predict.py": "e7a627fbdc9ef8d4ab3189a6fa5ac02d56ae703ccd1a81507aea0bd66e042162",
+    "quantity_flow_features.py": "4b89d26a11a2663c8da87c7dd41d7c9add624229e978fd75df037ec232609464",
+    "question_operation_features.py": "eb75e1b07839c0040823eada031fbca5adbd5e6f452784985aa4bc0f33166238",
+    "score_predictions.py": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960",
+    "selection_utils.py": "3eb0900df892afd59776f11e3e4c1dce5d34fb969acaef681a5bdb39d98bbb14",
+    "submission.py": "186c53317db45eca4abac3ab481224709df829934bfb73215d0b619e87ca72ac",
+    "submission_answer_groups.py": "0d04292529bad27d643585560da52a546501747f54eccaae515df9a0b7472136",
+    "submission_ensemble.py": "372f89d67e7b35f579b354aabd6d56d8baf28b1d1de21bf01839344797037948",
+    "submission_question_operations.py": "7df31d4b4f6034169fb01f18d8827a1d5ddeefd415033f1ac8d2a95bd3fa871e",
+    "train.py": "a740b3ca65752c9bfd23f022109860c689b109daebc066c88b9a89ea65e4432c",
+    "train_surface.py": "863ccf7873ab5075dcc955f0e80257d6650993b569b00d1c09fb715329a32629"
+  },
+  "prefit_sha256": "1949ebe15ed97f6d5b2fd3c36d7a0937b5af9dbadac356118a64ac6bbfc7d45c",
+  "raw_manifest_sha256": "7293538797f109e22e887799d49ef4532965b9baf35252c3d0254596f246210b",
+  "public_push_performed": false,
+  "report_generated": false,
+  "parent_independent_fit_audit_pending": true,
+  "clean_archive_numpy_only_verification_pending": true,
+  "reference_CPU_measured": false
+}

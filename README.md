@@ -62,7 +62,7 @@ Training uses only the 4,755 supplied training questions. Stage S retains the or
 
 The residual minimizes weighted mean logistic loss plus `0.005 * ||v||²`, starts from zero and uses L-BFGS-B with `maxiter=2000`, `ftol=1e-12`, `gtol=1e-6` and `maxls=40`. No intercept, validation fitting, parameter search or test fitting occurs. Dependency versions are pinned to NumPy 2.3.5, SciPy 1.16.3, scikit-learn 1.7.2 and threadpoolctl 3.6.0.
 
-The final model is in `runs/retrained/checkpoint`. The output also retains the S and residual pair audits, scalers, coefficients, initial/final objectives and gradients, feature table and fitting provenance. Clean-package cold-training reproduction is pending verification; the supplied checkpoint remains the previously qualified snapshot.
+The final model is in `runs/retrained/checkpoint`. The output also retains the S and residual pair audits, scalers, coefficients, initial/final objectives and gradients, feature table and fitting provenance. A cold run of this standalone trainer reproduced the supplied checkpoint byte for byte. Its five-fold S/L scores also match every archived score exactly. Fresh validation reproduced all 798 earlier choices and the 751/798 score; compact receipts are in `results/`.
 
 To reproduce the fixed five-fold S/L comparison on the training development pool:
 

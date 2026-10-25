@@ -1,0 +1,38 @@
+{
+  "fold": 0,
+  "questions": 761,
+  "method": "E:\\a-HKU\\7506\\DASE7506-MP2-main\\.arbor\\worktrees\\v3-local-submission\\src\\submission.py",
+  "checkpoint": "E:\\a-HKU\\7506\\DASE7506-MP2-main\\.arbor\\worktrees\\v3-local-submission\\runs\\cold_full\\checkpoint",
+  "uncompressed_asset_bytes": 9157,
+  "predict_seconds_excluding_startup_and_inputs": 0.8587287999998807,
+  "seconds_after_stdlib_imports": 2.24346499999956,
+  "input_contract_checks": {
+    "checkpoint_reload": true,
+    "new_ids_and_reordered_subset": true,
+    "empty_input": true,
+    "python_integer_choices": true,
+    "candidate_permutation": true
+  },
+  "numeric_threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 4,
+      "prefix": "libscipy_openblas",
+      "filepath": "E:\\a-HKU\\7506\\DASE7506-MP2-main\\.venv\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-9e3e5a4229c1ca39f10dc82bba9e2b2b.dll",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    }
+  ],
+  "opened_paths": [
+    "E:\\a-HKU\\7506\\DASE7506-MP2-main\\.arbor\\worktrees\\v3-local-submission\\runs\\cold_full\\checkpoint\\config.json",
+    "E:\\a-HKU\\7506\\DASE7506-MP2-main\\.arbor\\worktrees\\v3-local-submission\\runs\\cold_full\\checkpoint\\weights.npz"
+  ],
+  "reference_reads_blocked": true,
+  "noncheckpoint_array_reads_blocked": true,
+  "gpu_frameworks_loaded": false,
+  "score_computed": false,
+  "official_validation_used": false,
+  "official_test_used": false
+}

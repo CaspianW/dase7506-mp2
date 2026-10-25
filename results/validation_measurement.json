@@ -1,0 +1,17 @@
+{
+  "protocol": "dase7506-mp2-open-hard-verifier-v5",
+  "split": "validation",
+  "correct": 751,
+  "n": 798,
+  "accuracy": 94.11027568922306,
+  "scoring_seconds": 0.03159479999976611,
+  "external_prediction_seconds": 1.064353900000242,
+  "external_scoring_seconds": 0.4516280999996525,
+  "external_total_seconds": 1.5159819999998945,
+  "reference_cpu_measurement": false,
+  "inference_asset_bytes": 9157,
+  "cpu_numeric_threads_limit": 4,
+  "predictions_sha256": "7e3d7739a0b7de4f720975433b3c22003f065ecdd7a03639b81546c822d6e951",
+  "official_score_sha256": "5e841fd71cc47eb79d12d6b5c8e23634451d77a13cdfdce3f96656a94150db29",
+  "timing_includes_startup_imports_loading_preprocessing": true
+}

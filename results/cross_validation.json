@@ -1,0 +1,194 @@
+{
+  "results": {
+    "S": {
+      "pooled": {
+        "overall": {
+          "correct": 3505,
+          "n": 3804,
+          "accuracy": 92.13985278654049
+        },
+        "disagreement": {
+          "correct": 1392,
+          "n": 1691,
+          "accuracy": 82.31815493790657
+        }
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "metrics": {
+            "overall": {
+              "correct": 691,
+              "n": 761,
+              "accuracy": 90.80157687253613
+            },
+            "disagreement": {
+              "correct": 268,
+              "n": 338,
+              "accuracy": 79.28994082840237
+            }
+          }
+        },
+        {
+          "fold": 1,
+          "metrics": {
+            "overall": {
+              "correct": 717,
+              "n": 761,
+              "accuracy": 94.21813403416557
+            },
+            "disagreement": {
+              "correct": 294,
+              "n": 338,
+              "accuracy": 86.98224852071006
+            }
+          }
+        },
+        {
+          "fold": 2,
+          "metrics": {
+            "overall": {
+              "correct": 708,
+              "n": 761,
+              "accuracy": 93.03547963206307
+            },
+            "disagreement": {
+              "correct": 285,
+              "n": 338,
+              "accuracy": 84.31952662721893
+            }
+          }
+        },
+        {
+          "fold": 3,
+          "metrics": {
+            "overall": {
+              "correct": 707,
+              "n": 761,
+              "accuracy": 92.90407358738501
+            },
+            "disagreement": {
+              "correct": 285,
+              "n": 339,
+              "accuracy": 84.070796460177
+            }
+          }
+        },
+        {
+          "fold": 4,
+          "metrics": {
+            "overall": {
+              "correct": 682,
+              "n": 760,
+              "accuracy": 89.73684210526316
+            },
+            "disagreement": {
+              "correct": 260,
+              "n": 338,
+              "accuracy": 76.92307692307692
+            }
+          }
+        }
+      ]
+    },
+    "local_arithmetic": {
+      "pooled": {
+        "overall": {
+          "correct": 3523,
+          "n": 3804,
+          "accuracy": 92.6130389064143
+        },
+        "disagreement": {
+          "correct": 1410,
+          "n": 1691,
+          "accuracy": 83.3826138379657
+        }
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "metrics": {
+            "overall": {
+              "correct": 693,
+              "n": 761,
+              "accuracy": 91.06438896189225
+            },
+            "disagreement": {
+              "correct": 270,
+              "n": 338,
+              "accuracy": 79.88165680473372
+            }
+          }
+        },
+        {
+          "fold": 1,
+          "metrics": {
+            "overall": {
+              "correct": 720,
+              "n": 761,
+              "accuracy": 94.61235216819973
+            },
+            "disagreement": {
+              "correct": 297,
+              "n": 338,
+              "accuracy": 87.8698224852071
+            }
+          }
+        },
+        {
+          "fold": 2,
+          "metrics": {
+            "overall": {
+              "correct": 712,
+              "n": 761,
+              "accuracy": 93.5611038107753
+            },
+            "disagreement": {
+              "correct": 289,
+              "n": 338,
+              "accuracy": 85.50295857988165
+            }
+          }
+        },
+        {
+          "fold": 3,
+          "metrics": {
+            "overall": {
+              "correct": 713,
+              "n": 761,
+              "accuracy": 93.69250985545335
+            },
+            "disagreement": {
+              "correct": 291,
+              "n": 339,
+              "accuracy": 85.84070796460178
+            }
+          }
+        },
+        {
+          "fold": 4,
+          "metrics": {
+            "overall": {
+              "correct": 685,
+              "n": 760,
+              "accuracy": 90.13157894736842
+            },
+            "disagreement": {
+              "correct": 263,
+              "n": 338,
+              "accuracy": 77.81065088757397
+            }
+          }
+        }
+      ]
+    }
+  },
+  "training_fits": {
+    "S": 5,
+    "residual": 5
+  },
+  "protocol_sha256": "b563fb3e18995a2805f29f62e0208917d4a4c1cc36b64a167f45f0efdf62ad26",
+  "coordinator_holdout_used": false,
+  "official_validation_used": false,
+  "official_test_used": false
+}
