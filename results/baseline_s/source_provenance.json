@@ -1,0 +1,13 @@
+{
+  "submission_ensemble.py:choose_scores": "aa332c6d0e6f1f4791796b62528b4846cd18a0400b563710641257028e8d479d",
+  "train_v2_group_augmentation.py:subset_representations": "2f5d2618dd7ac838b6124d89b00f859e6a9f9ec28dcb16ee1e26e1ba1499071a",
+  "train_v2_group_augmentation.py:build_pairs": "de6d1d9dd086aa3b24ca7e6ce5320ad29a28acd7b2af6077ee81da071bf594de",
+  "train_v2_question_operations.py:objective": "0a1dd960b632e38448d1792d745112261efef3a7de16f66ba32179d4680597c3",
+  "train_v2_question_operations.py:joint_pairs": "84bf9f1eac341da5c066864f597c26f30b1147cf782af89e4bece8403239ab48",
+  "train_v2_question_operations.py:export_checkpoint": "12ca4b0db83ba7f16c3c8500be64b8050fff94c36d5a985c1f6dd194382b34da",
+  "train_v2_question_operations.py:fit_question_operations": "932c871176a71bb024873d2d5ccd5a9bcf3e28d0acc829aaba8b55d7621abfd1",
+  "frozen_model_source_commit": "d64e449aee9482e112b8c0ced263b9bacf5447b2",
+  "research_source_commit": "10fd19d",
+  "official_course_commit": "bb801f4f2e7629d270df765ab12c333b2dc616bb",
+  "training_function_extraction": "Named function bodies retain the original algorithm; exploratory runners and unused ensemble implementations are omitted."
+}

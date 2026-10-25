@@ -1,0 +1,65 @@
+{
+  "files": {
+    "checkpoint/config.json": {
+      "bytes": 193,
+      "sha256": "bbcd6cab9b7e40e649b4e160c1a9726a7f89ae1d0d2dc90fa9d4c05f5aefd6cf"
+    },
+    "checkpoint/weights.npz": {
+      "bytes": 8964,
+      "sha256": "9f696058356824d098ffabe5a069dcbf43d6cf1a7861d087dc0af793931033b2"
+    },
+    "code/arithmetic_features.py": {
+      "bytes": 8072,
+      "sha256": "97fd69713c7a73e513cacb1c01bc38bf6dad82dde80be746bc7492fb1c5e7e6a"
+    },
+    "code/common.py": {
+      "bytes": 4192,
+      "sha256": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c"
+    },
+    "code/method.py": {
+      "bytes": 1881,
+      "sha256": "186c53317db45eca4abac3ab481224709df829934bfb73215d0b619e87ca72ac"
+    },
+    "code/predict.py": {
+      "bytes": 1680,
+      "sha256": "e7a627fbdc9ef8d4ab3189a6fa5ac02d56ae703ccd1a81507aea0bd66e042162"
+    },
+    "code/quantity_flow_features.py": {
+      "bytes": 8573,
+      "sha256": "4b89d26a11a2663c8da87c7dd41d7c9add624229e978fd75df037ec232609464"
+    },
+    "code/question_operation_features.py": {
+      "bytes": 3829,
+      "sha256": "eb75e1b07839c0040823eada031fbca5adbd5e6f452784985aa4bc0f33166238"
+    },
+    "code/requirements.txt": {
+      "bytes": 14,
+      "sha256": "b278f1339f69781eefd2f8fc58f11e4c07a5fbd9134324562c8c0f65599b34c5"
+    },
+    "code/score_predictions.py": {
+      "bytes": 1283,
+      "sha256": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960"
+    },
+    "code/selection_utils.py": {
+      "bytes": 3544,
+      "sha256": "3eb0900df892afd59776f11e3e4c1dce5d34fb969acaef681a5bdb39d98bbb14"
+    },
+    "code/submission_answer_groups.py": {
+      "bytes": 3411,
+      "sha256": "0d04292529bad27d643585560da52a546501747f54eccaae515df9a0b7472136"
+    },
+    "code/submission_ensemble.py": {
+      "bytes": 4383,
+      "sha256": "372f89d67e7b35f579b354aabd6d56d8baf28b1d1de21bf01839344797037948"
+    },
+    "code/submission_question_operations.py": {
+      "bytes": 1863,
+      "sha256": "7df31d4b4f6034169fb01f18d8827a1d5ddeefd415033f1ac8d2a95bd3fa871e"
+    },
+    "training_recipe.json": {
+      "bytes": 3373,
+      "sha256": "287ec1f2f1907f70e0f57e834a63472b39518e8ac81f23869cbf0f7efb8ebfde"
+    }
+  },
+  "scope": "Qualified local candidate; publication unchanged"
+}

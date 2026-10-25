@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "tests": 6,
+  "explicit_mock_optimizer_calls": 2,
+  "actual_model_fits": 0,
+  "supplied_inputs_loaded": false,
+  "reference_rows_decoded": 0,
+  "source_sha256": {
+    "src\\arithmetic_features.py": "97fd69713c7a73e513cacb1c01bc38bf6dad82dde80be746bc7492fb1c5e7e6a",
+    "src\\common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "src\\cross_validate.py": "d5d2abfc532cbd1bcdfb19a220518e20b6db5706409c4a47c1dc76e4a0ec9178",
+    "src\\evaluate.py": "d2e6924651a1329d57f8e8c0d1fdaecfb557c6acb44987fe5d2fc4ad13a75f4e",
+    "src\\predict.py": "e7a627fbdc9ef8d4ab3189a6fa5ac02d56ae703ccd1a81507aea0bd66e042162",
+    "src\\quantity_flow_features.py": "4b89d26a11a2663c8da87c7dd41d7c9add624229e978fd75df037ec232609464",
+    "src\\question_operation_features.py": "eb75e1b07839c0040823eada031fbca5adbd5e6f452784985aa4bc0f33166238",
+    "src\\score_predictions.py": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960",
+    "src\\selection_utils.py": "3eb0900df892afd59776f11e3e4c1dce5d34fb969acaef681a5bdb39d98bbb14",
+    "src\\submission.py": "186c53317db45eca4abac3ab481224709df829934bfb73215d0b619e87ca72ac",
+    "src\\submission_answer_groups.py": "0d04292529bad27d643585560da52a546501747f54eccaae515df9a0b7472136",
+    "src\\submission_ensemble.py": "372f89d67e7b35f579b354aabd6d56d8baf28b1d1de21bf01839344797037948",
+    "src\\submission_question_operations.py": "7df31d4b4f6034169fb01f18d8827a1d5ddeefd415033f1ac8d2a95bd3fa871e",
+    "src\\train.py": "a740b3ca65752c9bfd23f022109860c689b109daebc066c88b9a89ea65e4432c",
+    "src\\train_surface.py": "863ccf7873ab5075dcc955f0e80257d6650993b569b00d1c09fb715329a32629"
+  },
+  "test_sha256": "3be67b61f8eff74db6f71def2480df317d44cdf030de8d7c8f76a21a29f9c529"
+}

@@ -1,19 +1,8 @@
 {
   "schema_version": 1,
-  "model": "answer_group_question_operations",
-  "variant": "numeric_surface",
-  "feature_names": [
-    "answer_sign",
-    "log1p_clipped_absolute_answer",
-    "answer_is_integer",
-    "answer_equals_retained_question_number",
-    "log1p_retained_question_number_count",
-    "log1p_answer_to_question_max_magnitude"
-  ],
-  "base_recipe": "subsets_equal_question",
+  "model": "surface_quantity_flow",
+  "variant": "local_arithmetic",
   "lambda": 0.01,
-  "no_intercept": true,
-  "jointly_fitted": true,
-  "inference_uses_full_original_groups": true,
-  "scale_folded_into_weights": true
+  "anchor_frozen": true,
+  "inference_uses_original_full_groups": true
 }

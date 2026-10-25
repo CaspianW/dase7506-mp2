@@ -1,13 +1,156 @@
 {
-  "submission_ensemble.py:choose_scores": "aa332c6d0e6f1f4791796b62528b4846cd18a0400b563710641257028e8d479d",
-  "train_v2_group_augmentation.py:subset_representations": "2f5d2618dd7ac838b6124d89b00f859e6a9f9ec28dcb16ee1e26e1ba1499071a",
-  "train_v2_group_augmentation.py:build_pairs": "de6d1d9dd086aa3b24ca7e6ce5320ad29a28acd7b2af6077ee81da071bf594de",
-  "train_v2_question_operations.py:objective": "0a1dd960b632e38448d1792d745112261efef3a7de16f66ba32179d4680597c3",
-  "train_v2_question_operations.py:joint_pairs": "84bf9f1eac341da5c066864f597c26f30b1147cf782af89e4bece8403239ab48",
-  "train_v2_question_operations.py:export_checkpoint": "12ca4b0db83ba7f16c3c8500be64b8050fff94c36d5a985c1f6dd194382b34da",
-  "train_v2_question_operations.py:fit_question_operations": "932c871176a71bb024873d2d5ccd5a9bcf3e28d0acc829aaba8b55d7621abfd1",
-  "frozen_model_source_commit": "d64e449aee9482e112b8c0ced263b9bacf5447b2",
-  "research_source_commit": "10fd19d",
-  "official_course_commit": "bb801f4f2e7629d270df765ab12c333b2dc616bb",
-  "training_function_extraction": "Named function bodies retain the original algorithm; exploratory runners and unused ensemble implementations are omitted."
+  "public_base_commit": "a1973666c71c4ba72a1183b337043f8fb050c06e",
+  "candidate_branch": "v3/qualified-local-arithmetic",
+  "candidate_commit": "8ed8f88de3d5ed039946aaf4bc923c6d5d23ef3f",
+  "candidate_snapshot_manifest_sha256": "4119c04b8e6f938458a4f88dc75f7449e8bf72d13e2e2c724d2cd0a465c5dc75",
+  "snapshot_files_verified": 15,
+  "mapping": {
+    "checkpoint/config.json": {
+      "destination": "checkpoint/config.json",
+      "sha256": "bbcd6cab9b7e40e649b4e160c1a9726a7f89ae1d0d2dc90fa9d4c05f5aefd6cf",
+      "byte_exact": true
+    },
+    "checkpoint/weights.npz": {
+      "destination": "checkpoint/weights.npz",
+      "sha256": "9f696058356824d098ffabe5a069dcbf43d6cf1a7861d087dc0af793931033b2",
+      "byte_exact": true
+    },
+    "code/arithmetic_features.py": {
+      "destination": "src/arithmetic_features.py",
+      "sha256": "97fd69713c7a73e513cacb1c01bc38bf6dad82dde80be746bc7492fb1c5e7e6a",
+      "byte_exact": true,
+      "adaptation": null
+    },
+    "code/common.py": {
+      "destination": "src/common.py",
+      "sha256": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+      "byte_exact": true,
+      "adaptation": null
+    },
+    "code/method.py": {
+      "destination": "src/submission.py",
+      "sha256": "186c53317db45eca4abac3ab481224709df829934bfb73215d0b619e87ca72ac",
+      "byte_exact": true,
+      "adaptation": null
+    },
+    "code/predict.py": {
+      "destination": "src/predict.py",
+      "sha256": "e7a627fbdc9ef8d4ab3189a6fa5ac02d56ae703ccd1a81507aea0bd66e042162",
+      "byte_exact": true,
+      "adaptation": null
+    },
+    "code/quantity_flow_features.py": {
+      "destination": "src/quantity_flow_features.py",
+      "sha256": "4b89d26a11a2663c8da87c7dd41d7c9add624229e978fd75df037ec232609464",
+      "byte_exact": true,
+      "adaptation": null
+    },
+    "code/question_operation_features.py": {
+      "destination": "src/question_operation_features.py",
+      "sha256": "eb75e1b07839c0040823eada031fbca5adbd5e6f452784985aa4bc0f33166238",
+      "byte_exact": true,
+      "adaptation": null
+    },
+    "code/requirements.txt": {
+      "destination": "requirements.txt",
+      "sha256": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7",
+      "byte_exact": false,
+      "adaptation": "Pinned root dependency replaces snapshot loose NumPy minimum"
+    },
+    "code/score_predictions.py": {
+      "destination": "src/score_predictions.py",
+      "sha256": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960",
+      "byte_exact": true,
+      "adaptation": null
+    },
+    "code/selection_utils.py": {
+      "destination": "src/selection_utils.py",
+      "sha256": "3eb0900df892afd59776f11e3e4c1dce5d34fb969acaef681a5bdb39d98bbb14",
+      "byte_exact": true,
+      "adaptation": null
+    },
+    "code/submission_answer_groups.py": {
+      "destination": "src/submission_answer_groups.py",
+      "sha256": "0d04292529bad27d643585560da52a546501747f54eccaae515df9a0b7472136",
+      "byte_exact": true,
+      "adaptation": null
+    },
+    "code/submission_ensemble.py": {
+      "destination": "src/submission_ensemble.py",
+      "sha256": "372f89d67e7b35f579b354aabd6d56d8baf28b1d1de21bf01839344797037948",
+      "byte_exact": true,
+      "adaptation": null
+    },
+    "code/submission_question_operations.py": {
+      "destination": "src/submission_question_operations.py",
+      "sha256": "7df31d4b4f6034169fb01f18d8827a1d5ddeefd415033f1ac8d2a95bd3fa871e",
+      "byte_exact": true,
+      "adaptation": null
+    },
+    "training_recipe.json": {
+      "destination": "results/training_recipe.json",
+      "sha256": "287ec1f2f1907f70e0f57e834a63472b39518e8ac81f23869cbf0f7efb8ebfde",
+      "byte_exact": true,
+      "adaptation": null
+    }
+  },
+  "retained_base_S_trainer_sha256": "863ccf7873ab5075dcc955f0e80257d6650993b569b00d1c09fb715329a32629",
+  "official_validation": {
+    "correct": 751,
+    "n": 798,
+    "accuracy": 94.11027568922306
+  },
+  "official_test_evaluated_for_candidate": false,
+  "historical_S_results_directory": "results/baseline_s",
+  "public_push_performed": false,
+  "report_generated": false,
+  "training_function_extraction": {
+    "train_v3_set_interaction.py:build_full_pairs": {
+      "clean_function": "build_full_pairs",
+      "normalized_source_sha256": "9d50d48149d96e19a4f8648bf862f759c6dd71de0684de9ce136ac1ce6e6c7c3",
+      "body_unchanged_except_function_names": true
+    },
+    "train_v3_quantity_flow.py:fingerprint": {
+      "clean_function": "fingerprint",
+      "normalized_source_sha256": "babae00271a087e615fc29650ae5429a5c250a50e87deeea10d0c35358cdf822",
+      "body_unchanged_except_function_names": true
+    },
+    "train_v3_quantity_flow.py:prepare_quantity_fold": {
+      "clean_function": "prepare_local",
+      "normalized_source_sha256": "666bd50c54929d0ff15d1701b94db06e89cba1c726f96004965cc3377dda1dc0",
+      "body_unchanged_except_function_names": true
+    },
+    "train_v3_quantity_flow.py:residual_design": {
+      "clean_function": "residual_design",
+      "normalized_source_sha256": "aeb9e9f6cbfa83cd8e15d65022b3455992414857ad23d7389b4a275d3b8225af",
+      "body_unchanged_except_function_names": true
+    },
+    "train_v3_quantity_flow.py:objective": {
+      "clean_function": "objective",
+      "normalized_source_sha256": "79dcccd2a03d71cf7386b8a23e0b9852efaa657168bd4d02fe5e030f4d461144",
+      "body_unchanged_except_function_names": true
+    },
+    "train_v3_quantity_flow.py:export_checkpoint": {
+      "clean_function": "export_checkpoint",
+      "normalized_source_sha256": "880a98304978c746f00b706634cd3bafe04a153e8bc0eb4202d1a504d6868c31",
+      "body_unchanged_except_function_names": true
+    },
+    "train_v3_quantity_flow.py:fit_quantity_flow": {
+      "clean_function": "fit_residual",
+      "normalized_source_sha256": "22ce190929f0122caf01f20a4281eefddf7410a76de640f8f67d8dc9548ebfde",
+      "body_unchanged_except_function_names": true
+    },
+    "train_v3_quantity_flow.py:native_scores": {
+      "clean_function": "native_scores",
+      "normalized_source_sha256": "19693b8665bb6b386f481ffeaacea7ce2fd77130089ad1ada82bfba38af11635",
+      "body_unchanged_except_function_names": true
+    },
+    "train_v3_quantity_flow.py:margin_parity": {
+      "clean_function": "margin_parity",
+      "normalized_source_sha256": "876f5197638b145e7d29d28342b1e5e1582c7c66984684f0563bef1bcf4f1c51",
+      "body_unchanged_except_function_names": true
+    }
+  },
+  "training_dependency_scope": "No imports from the research workspace; fixed routines are included in src/train.py.",
+  "public_IO_tools_preserved_byte_exact": true
 }

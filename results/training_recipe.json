@@ -1,0 +1,55 @@
+{
+  "variant": "local_arithmetic",
+  "train_questions": 4755,
+  "residual_dimension": 22,
+  "anchor": "corrected_numeric_surface_joint_subset_ranker",
+  "lambda_value": 0.01,
+  "recipe": "Unchanged train_v3_quantity_flow.fit_quantity_flow(...,variant=local_arithmetic)",
+  "source_sha256": {
+    "quantity_flow_features.py": "4b89d26a11a2663c8da87c7dd41d7c9add624229e978fd75df037ec232609464",
+    "submission_quantity_flow.py": "186c53317db45eca4abac3ab481224709df829934bfb73215d0b619e87ca72ac",
+    "train_v3_quantity_flow.py": "c5e1f5e73a6ebe666998657670801e7ea9a06f324ba4fb780e3ae5f4be15b908",
+    "probe_v3_quantity_flow.py": "16912f7908ef11b065b3d480c81351a9398461ee99b8cb2ec54584d29315f0a7",
+    "arithmetic_features.py": "97fd69713c7a73e513cacb1c01bc38bf6dad82dde80be746bc7492fb1c5e7e6a",
+    "train_v3_set_interaction.py": "46b8b74a7f0486804219e3e591c437f1eb495154fe2ff72bd43abfc41b5d1107",
+    "set_interaction_features.py": "908de1fd19be82017309ede1b99a05fda9112d20a06e679bd491563acec42b77",
+    "submission_set_interaction.py": "4d4d3166dd88c0c32dc69c8600b048ca7ac1666bce644e496406112c46a963b2",
+    "test_v3_quantity_flow.py": "2c2adc88774a5fe93d5b721838e5b4cab074ebf68a31995c2e221e2f745a3be7",
+    "train_v2_question_operations.py": "41da9860c3c60786296be9f137dcdae707e048e22cbefacf564aebb1cf6f32b9",
+    "submission_question_operations.py": "7df31d4b4f6034169fb01f18d8827a1d5ddeefd415033f1ac8d2a95bd3fa871e",
+    "question_operation_features.py": "eb75e1b07839c0040823eada031fbca5adbd5e6f452784985aa4bc0f33166238",
+    "train_v2_group_augmentation.py": "02790aa15d227721a29de563b450ad625f70430c2a537c5700ddd29e53a20521",
+    "submission_answer_groups.py": "0d04292529bad27d643585560da52a546501747f54eccaae515df9a0b7472136",
+    "train_v2_arithmetic_residual.py": "3fb6525d94e44c49b266a80915672ddd858c24ac145fad6afeb6e85800b9e04a",
+    "train_v3_question_alignment.py": "b9ad15f4c02c4d8863d48f41d8fd34a878575277f486a4725cf0b3636044ebaa",
+    "experiment_support.py": "ae5e263bc5096fd96fc79e53574d1236cce91ff6aeb2d8c5fe7b6d9ec3e67dfa",
+    "selection_utils.py": "3eb0900df892afd59776f11e3e4c1dce5d34fb969acaef681a5bdb39d98bbb14",
+    "submission_ensemble.py": "372f89d67e7b35f579b354aabd6d56d8baf28b1d1de21bf01839344797037948",
+    "v2_protocol.py": "945fdf682939960e9c6a3b426876c3cb1512949b5c746ae43c8fe4ed1054719f",
+    "common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "run_v3_arithmetic_gate.py": "27bb2c8897e5d364bf87b364d860e19c9cf0f8d9a044a76529a6cb59f9e88ce6"
+  },
+  "confirmation_plan_sha256": "6e1b78cecdfb26aadbb494a0a4ea2526d7e3cba36972bbc46d3a34ff4e28ad6c",
+  "fitting_receipt_sha256": "7d8059781f969d686f1bbcdc1da82b2c8c216fed3a9181527e3304db4d935367",
+  "fit_verification_sha256": "f083c8024db58128239840b6776d604913b0b389d54d24ba61d378e2540d58b5",
+  "original_fivefold_hard": [
+    1410,
+    1691
+  ],
+  "grouped_fivefold_hard": [
+    1405,
+    1691
+  ],
+  "heldout_hard": {
+    "correct": 347,
+    "n": 423,
+    "accuracy": 82.03309692671395
+  },
+  "official_validation": {
+    "correct": 751,
+    "n": 798,
+    "accuracy": 94.11027568922306
+  },
+  "test_evaluated_for_candidate": false,
+  "history": "Candidate selected after development comparisons; training holdout and official validation have prior use. Historical baseline test result is known."
+}

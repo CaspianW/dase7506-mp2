@@ -1,23 +1,23 @@
 # DASE7506 MP2: Selecting Reliable LLM Reasoning
 
-This repository contains the current frozen numeric-answer-group selector, its training code, checkpoint, and evaluation records. The official test score is **82.65524625267666% (386/467)**. The course report is pending; this repository has not been submitted to the course leaderboard.
+This local candidate contains the qualified **local-arithmetic selector L**, its frozen checkpoint and standalone reproduction code. Its recorded official validation accuracy is **94.11027568922306% (751/798)**. Its final test score is pending. This branch has not been pushed, and the course report and leaderboard issue remain pending.
 
-The selector groups candidates with equivalent parsed numeric answers, averages the supplied representations inside each group, and scores groups with a linear model plus six question/final-answer features. Training uses within-answer subset augmentation and equal total pair weight per informative question. Inference uses the original complete groups and one 1,034-element coefficient vector. It requires no model download or LLM call.
-
-## Files
+L first scores canonical numeric-answer groups with the surface selector S. A linear residual then uses bounded arithmetic checks and answer-format features from the candidate text. Equivalent parsed answers share a group; inference scores the original complete groups. The checkpoint contains a 1,034-element S anchor and a 22-element residual. It needs NumPy and the supplied embeddings, with no model download or LLM call.
 
 ```text
-src/          Inference, training, cross-validation, and official evaluation tools
-checkpoint/   Frozen weights and configuration: 9,089 uncompressed bytes
-results/      Scores, compact experiment records, split protocol, and hashes
+src/          Inference, standalone training, fixed cross-validation and evaluation
+checkpoint/   Frozen L weights and configuration, 9,157 bytes
+results/      Candidate recipe, source provenance and frozen split protocol
+              baseline_s/ contains historical S records and its checkpoint
+tests/        Synthetic checks without supplied data or actual fitting
 licenses/     Supplied data license and attribution
 ```
 
-Exploratory notebooks, failed-run checkpoints, environments, and the research workspace are kept outside this repository. `main` holds reviewed reproducible versions. Future experimental code stays local until it has passed the development checks.
+The historical S test result, 386/467, belongs to S and is stored under `results/baseline_s/`. It is not an L score. Experimental worktrees and rejected models are excluded from this package.
 
 ## Installation and data
 
-Use Python 3.12. Run these commands from the repository root:
+Use Python 3.12 from the repository root:
 
 ```powershell
 python -m venv .venv
@@ -26,74 +26,66 @@ git clone https://github.com/xudongwu-0/DASE7506-MP2.git upstream
 git -C upstream checkout bb801f4f2e7629d270df765ab12c333b2dc616bb
 ```
 
-On Linux or macOS, replace `.venv\Scripts\python.exe` with `.venv/bin/python`. The official data are in `upstream/code/data`; they are not duplicated in this repository. The official loader checks the input hashes. An existing unmodified copy of the course data can also be passed through `--data-dir`.
+On Linux or macOS, replace `.venv\Scripts\python.exe` with `.venv/bin/python`. The data are in `upstream/code/data`; they are not duplicated here. You can also pass an existing unmodified copy through `--data-dir`. The loader checks the official input hashes.
 
-## Evaluate the checkpoint
-
-Validation:
+## Evaluate the frozen checkpoint
 
 ```powershell
 .venv\Scripts\python.exe -B src/evaluate.py --data-dir upstream/code/data --split validation --output runs/validation
 ```
 
-Final test scoring or peer reproduction:
+The wrapper runs the official prediction and independent scoring tools in separate fresh processes. It records commands, source and asset hashes, score and external elapsed time, including startup, imports, input loading, preprocessing and scoring. The existing public tools retain their `--data-dir` support; numeric parsing and scoring semantics are unchanged.
+
+After the final candidate is frozen, the final test evaluation command is:
 
 ```powershell
-.venv\Scripts\python.exe -B src/evaluate.py --data-dir upstream/code/data --split test --output runs/test
+.venv\Scripts\python.exe -B src/evaluate.py --data-dir upstream/code/data --split test --output runs/final-test
 ```
 
-Use a fresh output directory each time. The wrapper runs the unchanged official `predict.py` and independent `score_predictions.py` in separate fresh processes. It records complete commands, source/asset hashes, the official score, and external wall time including process startup, imports, loading, preprocessing, and scoring. Numeric libraries are limited to four threads and GPU visibility is disabled.
-
-For an instructor audit bank, use `--split audit --data-dir PATH_TO_AUDIT_INPUTS`. When audit references are unavailable, run prediction alone:
+The test command has not been run for L. Use a fresh output directory for every evaluation. For an instructor audit bank without references, run prediction alone:
 
 ```powershell
 .venv\Scripts\python.exe -B src/predict.py --method src/submission.py --checkpoint checkpoint --split audit --data-dir PATH_TO_AUDIT_INPUTS --output runs/audit-predictions.json
 ```
 
-## Reproduce training
+Numeric libraries are limited to four threads and GPU visibility is disabled. The frozen checkpoint is 9,157 bytes, below the 16 MiB asset limit. The course requires prediction plus scoring within 30 seconds on its reference Xeon Platinum 8457C. Local CPU timings do not establish reference-machine eligibility.
 
-Install training dependencies, then fit only the supplied training split:
+## Reproduce training
 
 ```powershell
 .venv\Scripts\python.exe -m pip install -r requirements-train.txt
+.venv\Scripts\python.exe -B tests/test_training.py
 .venv\Scripts\python.exe -B src/train.py --data-dir upstream/code/data --output runs/retrained
 ```
 
-The checkpoint will be in `runs/retrained/checkpoint`. The fixed recipe uses standardization fitted on original training groups, logistic pair loss, mean-loss L2 coefficient 0.01, no intercept, `lbfgs`, `max_iter=2000`, and `tol=1e-6`. Augmented subsets never fit preprocessing. No validation/test targets enter fitting or stopping. The CPU fit is deterministic in the recorded environment; a full refit using this cleaned training entrypoint reproduced the frozen weights bit-for-bit.
+Training uses only the 4,755 supplied training questions. Stage S retains the original fixed numeric-surface trainer, including within-answer subset augmentation and equal total weight per informative question. The residual uses only original full-group correct-versus-incorrect pairs. Its old11 candidate features are pooled by group mean and maximum; the scaler includes every original group, including questions with one numeric answer. The S score is frozen as an offset.
 
-Reproduce the original development five-fold score:
+The residual minimizes weighted mean logistic loss plus `0.005 * ||v||²`, starts from zero and uses L-BFGS-B with `maxiter=2000`, `ftol=1e-12`, `gtol=1e-6` and `maxls=40`. No intercept, validation fitting, parameter search or test fitting occurs. Dependency versions are pinned to NumPy 2.3.5, SciPy 1.16.3, scikit-learn 1.7.2 and threadpoolctl 3.6.0.
 
-```powershell
-.venv\Scripts\python.exe -B src/cross_validate.py --data-dir upstream/code/data --output runs/cv
-```
+The final model is in `runs/retrained/checkpoint`. The output also retains the S and residual pair audits, scalers, coefficients, initial/final objectives and gradients, feature table and fitting provenance. Clean-package cold-training reproduction is pending verification; the supplied checkpoint remains the previously qualified snapshot.
 
-The supplied protocol uses 3,804 training questions, including 1,691 with conflicting parsed answers. The remaining 951 training questions formed a coordinator holdout; they are excluded from development CV. All final checkpoint fitting uses the full 4,755-question training split. Each CV fold refits preprocessing and weights from scratch.
-
-The matched ablation removes the six numeric-surface features while retaining the same embeddings, grouping, subsets, question weights, solver, and folds:
+To reproduce the fixed five-fold S/L comparison on the training development pool:
 
 ```powershell
-.venv\Scripts\python.exe -B src/cross_validate.py --data-dir upstream/code/data --without-numeric-surface --output runs/cv-without-numeric
+.venv\Scripts\python.exe -B src/cross_validate.py --data-dir upstream/code/data --output runs/cross-validation
 ```
 
-This control records 1,370/1,691 conflicting-answer questions correct, compared with 1,392 for the selected model. Both variants include the original group-support and variance features. This comparison does not establish that every numeric feature contributes independently.
+This command uses `results/protocol.json` and leaves the excluded training holdout and official validation/test splits unused. It evaluates both fixed models without selecting another recipe.
 
 ## Recorded results and limits
 
-| Evaluation | Correct | Accuracy |
-|---|---:|---:|
-| Development five-fold, conflicting answers | 1,392/1,691 | 82.3182% |
-| Coordinator training holdout, conflicting answers | 346/423 | 81.7967% |
-| Official validation | 746/798 | 93.4837% |
-| Official test | 386/467 | 82.6552% |
+| Evaluation | L correct | Scope |
+| --- | ---: | --- |
+| Original five-fold development | 1,410/1,691 | Conflicting numeric answers only |
+| Grouped five-fold development | 1,405/1,691 | Conflicting numeric answers only |
+| Excluded training holdout | 347/423 | Conflicting numeric answers only |
+| Official validation | 751/798 | All validation questions |
+| Official test | Pending | Final L evaluation has not run |
 
-Validation includes easier questions, so its overall accuracy should not be compared directly with the conflicting-answer-only scores. Published accuracy grades the final numeric answer, not every reasoning step.
+Overall validation accuracy includes questions whose candidates agree, so it is not directly comparable with the hard-question scores. The holdout gain over S was one question. Repeated development and validation comparisons, and the known historical S test score, limit claims of independent generalization. The metric grades the selected final numeric answer; it does not certify every reasoning step.
 
-The first frozen test evaluation took 0.5359309 seconds for fresh prediction plus independent scoring on an Intel Core i5-14600KF under Windows 11, with four numeric threads. Inference assets total 9,089 bytes, with uncompressed NPZ storage. Reference eligibility is determined on the course Xeon Platinum 8457C; local timing does not establish reference-machine eligibility.
+## Attribution and disclosure
 
-Development involved repeated CV, training holdout, and validation comparisons. An earlier V1 test aggregate was already known. A question-number punctuation parsing repair was made during development, and the earlier buggy attempt was excluded from qualification. This snapshot was selected before its V2 test score was opened. Neither the V2 test score nor per-question test errors were used to tune it. Test references must not be used for later training, tuning, selection, or lookups. These historical exposures prevent claims of a pristine independent test or global optimality.
+The bank, numeric parser, prediction runner and scorer come from the [official course repository](https://github.com/xudongwu-0/DASE7506-MP2). Questions and references derive from [GSM8K](https://github.com/openai/grade-school-math); course candidates and supplied representations were prepared with Qwen3-0.6B. Data notices remain in `licenses/`. No external training datasets or additional pretrained weights are included.
 
-## Attribution and remaining submission work
-
-The bank, numeric parser, prediction runner, and scorer come from the [official course repository](https://github.com/xudongwu-0/DASE7506-MP2). Original questions and references derive from [GSM8K](https://github.com/openai/grade-school-math); the course candidates and supplied representations were prepared with Qwen3-0.6B. Data notices are retained in `licenses/`. No pretrained model weights or external training datasets are included.
-
-Codex provided substantive assistance with research planning, implementation, training execution, audits, packaging, and documentation. The student must understand and review the implementation. A report of at most ten pages remains to be added after the experimental work is settled. The course website's GitHub issue submission is a separate step and has not been performed.
+Codex provided substantive assistance with planning, implementation, experiment execution, audits, packaging and documentation. The student must understand and review the code. A report of at most ten pages and the course website's GitHub issue submission remain to be completed.

@@ -1,3 +1,6 @@
 * text=auto eol=lf
 *.npz binary
 checkpoint/config.json -text
+results/baseline_s/checkpoint/config.json -text
+results/training_recipe.json -text
+results/candidate_snapshot_manifest.json -text
