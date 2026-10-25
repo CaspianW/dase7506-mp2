@@ -1,0 +1,148 @@
+{
+  "passed": true,
+  "source_freeze_commit": "07608ca8a9a37c2ed3cec03fd90fd03510a7f7a2",
+  "receipt_sha256": {
+    "source_review": "a238bcc140c3a9a772425148de5c63a3b34bea1698aab89d58219e2d993d025b",
+    "independent_fulltrain_verification": "e28380231ac46f6a0c5388a667db268f3302331027f4bc9f94a3417ba5b6728c",
+    "independent_cv_verification": "bd039f9a04de8d76aede47ae2818e08aef9649900a41d1caf3dc19fbf8ad91a0",
+    "clean_environment_verification": "8c8c584b9a88018f65f551e36172a3823f0e8e19e57eb75f9da133e390a689e5",
+    "inference_contract_cpu_audit": "753920efc5d2432b9c0b9c17b2b6124fb64ec178cd6b861217dbeb0a8b045ec3"
+  },
+  "proofs": {
+    "source_review": {
+      "passed": true,
+      "nine_training_routines_AST_exact_after_function_renaming": {
+        "fingerprint": true,
+        "prepare_quantity_fold": true,
+        "residual_design": true,
+        "objective": true,
+        "export_checkpoint": true,
+        "fit_quantity_flow": true,
+        "native_scores": true,
+        "margin_parity": true,
+        "build_full_pairs": true
+      },
+      "snapshot_and_clean_inference_hashes_verified": true,
+      "unchanged_base_S_trainer": true,
+      "source_commit": "07608ca8a9a37c2ed3cec03fd90fd03510a7f7a2",
+      "source_sha256": {
+        "arithmetic_features.py": "97fd69713c7a73e513cacb1c01bc38bf6dad82dde80be746bc7492fb1c5e7e6a",
+        "common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+        "cross_validate.py": "d5d2abfc532cbd1bcdfb19a220518e20b6db5706409c4a47c1dc76e4a0ec9178",
+        "evaluate.py": "d2e6924651a1329d57f8e8c0d1fdaecfb557c6acb44987fe5d2fc4ad13a75f4e",
+        "predict.py": "e7a627fbdc9ef8d4ab3189a6fa5ac02d56ae703ccd1a81507aea0bd66e042162",
+        "quantity_flow_features.py": "4b89d26a11a2663c8da87c7dd41d7c9add624229e978fd75df037ec232609464",
+        "question_operation_features.py": "eb75e1b07839c0040823eada031fbca5adbd5e6f452784985aa4bc0f33166238",
+        "score_predictions.py": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960",
+        "selection_utils.py": "3eb0900df892afd59776f11e3e4c1dce5d34fb969acaef681a5bdb39d98bbb14",
+        "submission.py": "186c53317db45eca4abac3ab481224709df829934bfb73215d0b619e87ca72ac",
+        "submission_answer_groups.py": "0d04292529bad27d643585560da52a546501747f54eccaae515df9a0b7472136",
+        "submission_ensemble.py": "372f89d67e7b35f579b354aabd6d56d8baf28b1d1de21bf01839344797037948",
+        "submission_question_operations.py": "7df31d4b4f6034169fb01f18d8827a1d5ddeefd415033f1ac8d2a95bd3fa871e",
+        "train.py": "a740b3ca65752c9bfd23f022109860c689b109daebc066c88b9a89ea65e4432c",
+        "train_surface.py": "863ccf7873ab5075dcc955f0e80257d6650993b569b00d1c09fb715329a32629"
+      },
+      "prefit_receipt_sha256": "1949ebe15ed97f6d5b2fd3c36d7a0937b5af9dbadac356118a64ac6bbfc7d45c",
+      "actual_model_fits": 0
+    },
+    "independent_fulltrain_verification": {
+      "passed": true,
+      "independent_feature_pair_gradient_reconstruction": true,
+      "optimizer_calls_in_audit": 0,
+      "residual_gradient_inf_norm": 8.160358804761621e-07,
+      "residual_objective": 0.21460174339018626,
+      "training_rows": 4755,
+      "stage_source_commit": "07608ca8a9a37c2ed3cec03fd90fd03510a7f7a2",
+      "all_coefficients_and_checkpoint_bytes_exact": true,
+      "training_fits_reproduced": {
+        "S": 1,
+        "residual": 1
+      },
+      "test_used": false
+    },
+    "independent_cv_verification": {
+      "passed": true,
+      "all50fold_fit_array_artifacts_exact": true,
+      "pooled_S_and_L_OOF_scores_bit_exact": true,
+      "maximum_OOF_score_difference": 0,
+      "protocol_JSON_semantically_exact": true,
+      "public_protocol_sha256": "b563fb3e18995a2805f29f62e0208917d4a4c1cc36b64a167f45f0efdf62ad26",
+      "research_protocol_sha256": "a0c5d74289b7ad48ddf8e3ed0a0a0e067d28efbbd03871c300df57b3d31695c5",
+      "training_fits_reproduced": {
+        "S": 5,
+        "residual": 5
+      },
+      "stage_source_commit": "07608ca8a9a37c2ed3cec03fd90fd03510a7f7a2",
+      "test_used": false
+    },
+    "clean_environment_verification": {
+      "passed": true,
+      "package_source_commit": "07608ca8a9a37c2ed3cec03fd90fd03510a7f7a2",
+      "archive_sha256": "9129703ceeb1d52e86130c55e933812e244b40296609189a23a236626642369b",
+      "archive_bytes": 129055,
+      "clean_environment": {
+        "python": "3.12.14",
+        "numpy": "2.3.5",
+        "scipy_available": false,
+        "sklearn_available": false,
+        "torch_available": false
+      },
+      "validation_correct": 751,
+      "validation_n": 798,
+      "all798selected_indices_and_IDs_exact": true,
+      "checkpoint_and_inference_bytes_exact": true,
+      "prediction_json_difference_from_original": "prediction_seconds only",
+      "external_prediction_plus_scoring_seconds": 1.4045408999991196,
+      "active_inference_asset_bytes": 9157,
+      "all_packaged_checkpoint_bytes_including_historical_S": 18246,
+      "cpu_numeric_threads_limit": 4,
+      "reference_CPU_measured": false,
+      "newly_scored_official_validation_reproductions": 2,
+      "new_official_test_evaluations": 0,
+      "public_push_performed": false,
+      "report_generated": false
+    },
+    "inference_contract_cpu_audit": {
+      "fold": 0,
+      "questions": 761,
+      "method": "E:\\a-HKU\\7506\\DASE7506-MP2-main\\.arbor\\worktrees\\v3-local-submission\\src\\submission.py",
+      "checkpoint": "E:\\a-HKU\\7506\\DASE7506-MP2-main\\.arbor\\worktrees\\v3-local-submission\\checkpoint",
+      "uncompressed_asset_bytes": 9157,
+      "predict_seconds_excluding_startup_and_inputs": 0.8089089000004606,
+      "seconds_after_stdlib_imports": 2.1697329000007812,
+      "input_contract_checks": {
+        "checkpoint_reload": true,
+        "new_ids_and_reordered_subset": true,
+        "empty_input": true,
+        "python_integer_choices": true,
+        "candidate_permutation": true
+      },
+      "numeric_threadpools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 4,
+          "prefix": "libscipy_openblas",
+          "filepath": "E:\\a-HKU\\7506\\DASE7506-MP2-main\\.venv\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-9e3e5a4229c1ca39f10dc82bba9e2b2b.dll",
+          "version": "0.3.30",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        }
+      ],
+      "opened_paths": [
+        "E:\\a-HKU\\7506\\DASE7506-MP2-main\\.arbor\\worktrees\\v3-local-submission\\checkpoint\\config.json",
+        "E:\\a-HKU\\7506\\DASE7506-MP2-main\\.arbor\\worktrees\\v3-local-submission\\checkpoint\\weights.npz"
+      ],
+      "reference_reads_blocked": true,
+      "noncheckpoint_array_reads_blocked": true,
+      "gpu_frameworks_loaded": false,
+      "score_computed": false,
+      "official_validation_used": false,
+      "official_test_used": false
+    }
+  },
+  "audit_optimizer_calls": 0,
+  "official_test_evaluated": false,
+  "public_push_performed": false,
+  "report_generated": false
+}

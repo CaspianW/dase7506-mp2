@@ -100,7 +100,13 @@
   "raw_manifest_sha256": "7293538797f109e22e887799d49ef4532965b9baf35252c3d0254596f246210b",
   "public_push_performed": false,
   "report_generated": false,
-  "parent_independent_fit_audit_pending": true,
-  "clean_archive_numpy_only_verification_pending": true,
-  "reference_CPU_measured": false
+  "parent_independent_fit_audit_pending": false,
+  "clean_archive_numpy_only_verification_pending": false,
+  "reference_CPU_measured": false,
+  "parent_independent_fit_audit_passed": true,
+  "clean_archive_numpy_only_verification_passed": true,
+  "parent_verification_file": "results/parent_verification.json",
+  "parent_verification_sha256": "867d0e483c16b47a9c95c23394ce9a7c13067c91d31e38c1eae6893f236cc9e2",
+  "official_validation_reproductions_including_parent": 2,
+  "CPUguards_including_parent": 2
 }
