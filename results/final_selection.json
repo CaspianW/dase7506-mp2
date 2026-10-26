@@ -1,0 +1,53 @@
+{
+  "date_utc_plus_8": "2026-10-26",
+  "frozen_before_test_utc": "2026-10-26 14:34:10 UTC",
+  "student_name": "Wu Houlin",
+  "student_id": "3036863317",
+  "selected_method": "numeric-answer-group surface anchor plus local-arithmetic residual",
+  "variant": "local_arithmetic",
+  "candidate_research_commit": "8ed8f88de3d5ed039946aaf4bc923c6d5d23ef3f",
+  "clean_source_commit": "22b7e083034457a1c2505e8d2a6c28b6d5575475",
+  "choice_basis": "The retained L candidate passed the original and grouped development checks, the existing training holdout and official validation; later variants did not satisfy their declared screens. Selection is fixed before this candidate test score is read.",
+  "development_hard": [
+    1410,
+    1691
+  ],
+  "grouped_development_hard": [
+    1405,
+    1691
+  ],
+  "existing_holdout_hard": [
+    347,
+    423
+  ],
+  "official_validation": [
+    751,
+    798
+  ],
+  "known_test_exposure": "Historical S baseline score386/467 and earlier baseline exposure are known. The current L candidate has not been test-scored before this freeze. No claim of pristine blindness is made.",
+  "frozen_source_sha256": {
+    "src/arithmetic_features.py": "97fd69713c7a73e513cacb1c01bc38bf6dad82dde80be746bc7492fb1c5e7e6a",
+    "src/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "src/cross_validate.py": "d5d2abfc532cbd1bcdfb19a220518e20b6db5706409c4a47c1dc76e4a0ec9178",
+    "src/evaluate.py": "d2e6924651a1329d57f8e8c0d1fdaecfb557c6acb44987fe5d2fc4ad13a75f4e",
+    "src/predict.py": "e7a627fbdc9ef8d4ab3189a6fa5ac02d56ae703ccd1a81507aea0bd66e042162",
+    "src/quantity_flow_features.py": "4b89d26a11a2663c8da87c7dd41d7c9add624229e978fd75df037ec232609464",
+    "src/question_operation_features.py": "eb75e1b07839c0040823eada031fbca5adbd5e6f452784985aa4bc0f33166238",
+    "src/score_predictions.py": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960",
+    "src/selection_utils.py": "3eb0900df892afd59776f11e3e4c1dce5d34fb969acaef681a5bdb39d98bbb14",
+    "src/submission.py": "186c53317db45eca4abac3ab481224709df829934bfb73215d0b619e87ca72ac",
+    "src/submission_answer_groups.py": "0d04292529bad27d643585560da52a546501747f54eccaae515df9a0b7472136",
+    "src/submission_ensemble.py": "372f89d67e7b35f579b354aabd6d56d8baf28b1d1de21bf01839344797037948",
+    "src/submission_question_operations.py": "7df31d4b4f6034169fb01f18d8827a1d5ddeefd415033f1ac8d2a95bd3fa871e",
+    "src/train.py": "a740b3ca65752c9bfd23f022109860c689b109daebc066c88b9a89ea65e4432c",
+    "src/train_surface.py": "863ccf7873ab5075dcc955f0e80257d6650993b569b00d1c09fb715329a32629"
+  },
+  "checkpoint_sha256": {
+    "config.json": "bbcd6cab9b7e40e649b4e160c1a9726a7f89ae1d0d2dc90fa9d4c05f5aefd6cf",
+    "weights.npz": "9f696058356824d098ffabe5a069dcbf43d6cf1a7861d087dc0af793931033b2"
+  },
+  "additional_inference_bytes": 9157,
+  "final_test_policy": "One complete-bank evaluation of this frozen L method using the official predictor and scorer in fresh processes. No retraining, parameter adjustment, model switching or per-question test-error analysis afterward. Reproduction may repeat the unchanged artifact without selection.",
+  "report_policy": "English report at most10pages; disclose substantial Codex assistance and all split/test exposure. Drafting resumed explicitly by the user on2026-10-26.",
+  "publication_policy": "Publish the clean matching code, report, official aggregate score and checkpoint. Preserve historical baseline release and code history. Preparation does not create the course leaderboard issue."
+}
