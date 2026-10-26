@@ -1,5 +1,6 @@
 * text=auto eol=lf
 *.npz binary
+*.pdf binary
 checkpoint/config.json -text
 results/baseline_s/checkpoint/config.json -text
 results/training_recipe.json -text

@@ -1,0 +1,1305 @@
+{
+  "scope": "Frozen pre-test research records; raw runs remain local. Historical not-tested flags describe the time of each round.",
+  "rounds": [
+    {
+      "round": "alignment",
+      "source_record": "research_v3/alignment/ROUND_SUMMARY.json",
+      "source_record_sha256": "b1ec17de3c1a55c3e61ee858e61aaf9f6b10e09465ea8da6300bedee9bbc12d3",
+      "record": {
+        "status": "complete, not qualified",
+        "hard_questions": 1691,
+        "S_hard_correct": 1392,
+        "format_hard_correct": 1393,
+        "alignment_hard_correct": 1399,
+        "alignment_gain_vs_S": 7,
+        "alignment_gain_vs_format": 6,
+        "alignment_nonworse_folds_vs_S": 3,
+        "training_fits": 15,
+        "cpu_guards": 15,
+        "parent_independently_verified_checkpoints": 15,
+        "new_gate_queries": 0,
+        "new_official_validation_evaluations": 0,
+        "new_official_test_evaluations": 0,
+        "public_model_changed": false,
+        "source_branch": "v3/question-alignment",
+        "source_commit": "46755f011937b08aaa6c58fd05e35da7a467abb4",
+        "evidence": "research_v3/alignment/evidence.json",
+        "verification": "research_v3/alignment/independent_verification.json",
+        "next_stage": "Predeclare learned question conditioning separately; do not tune this handcrafted feature list after feedback."
+      }
+    },
+    {
+      "round": "lowrank_conditioning",
+      "source_record": "research_v3/lowrank_conditioning/ROUND_SUMMARY.json",
+      "source_record_sha256": "b7abc40e6811195b69ca3b58730f77c2dc67c944ff6804490a8e530583b7e0fb",
+      "record": {
+        "status": "complete, not qualified",
+        "hard_questions": 1691,
+        "S_hard_correct": 1392,
+        "constant_question_hard_correct": 1397,
+        "question_conditioned_hard_correct": 1328,
+        "conditional_gain_vs_S": -64,
+        "conditional_gain_vs_constant": -69,
+        "conditional_seed_hard_correct": {
+          "42": 1322,
+          "43": 1327,
+          "44": 1327
+        },
+        "nonworse_conditional_seeds_vs_S": 0,
+        "S_training_fits": 5,
+        "factor_training_fits": 30,
+        "cpu_guards": 15,
+        "parent_independently_verified_S_fits": 5,
+        "parent_independently_verified_factor_fits": 30,
+        "new_gate_queries": 0,
+        "new_official_validation_evaluations": 0,
+        "new_official_test_evaluations": 0,
+        "public_model_changed": false,
+        "source_branch": "v3/lowrank-conditioning",
+        "frozen_source_commit": "8b0244c19362292c4398080f23af4ac35f366be1",
+        "evidence": "research_v3/lowrank_conditioning/evidence.json",
+        "verification": "research_v3/lowrank_conditioning/independent_verification.json",
+        "diagnostics": "research_v3/lowrank_conditioning/diagnostics.json",
+        "interpretation": "The fixed lexical rank-eight conditioning recipe failed matched controls. Training objectives decreased while conditional OOF accuracy fell; this is consistent with overfitting, without establishing a unique cause or ruling out all question conditioning.",
+        "decision": "Keep frozen numeric-surface S. Prune this fixed recipe; do not tune its rank, penalty or seeds using these results. No report or public repository update."
+      }
+    },
+    {
+      "round": "set_interaction",
+      "source_record": "research_v3/set_interaction/ROUND_SUMMARY.json",
+      "source_record_sha256": "baf58af5caf4156535312f4451b6b0b570fb7aa43d364c0352d54bd19eaf7b30",
+      "record": {
+        "status": "complete, not qualified",
+        "hard_questions": 1691,
+        "S_hard_correct": 1392,
+        "within_moments_hard_correct": 1380,
+        "self_interaction_hard_correct": 1374,
+        "set_interaction_hard_correct": 1375,
+        "set_gain_vs_S": -17,
+        "set_gain_vs_self": 1,
+        "set_gain_vs_within": -5,
+        "S_training_fits": 5,
+        "convex_residual_training_fits": 15,
+        "cpu_guards": 20,
+        "parent_independently_verified_S_fits": 5,
+        "parent_independently_verified_residual_fits": 15,
+        "new_gate_queries": 0,
+        "new_official_validation_evaluations": 0,
+        "new_official_test_evaluations": 0,
+        "public_model_changed": false,
+        "source_branch": "v3/set-interaction",
+        "frozen_source_commit": "aeaa91ecb4ebd3cd896dbf01701a568e24123987",
+        "plan_sha256": "6702e3d3a9acd31a77a2f3795473f3886a780799ac561447e1b2916f27957b70",
+        "evidence": "research_v3/set_interaction/evidence.json",
+        "verification": "research_v3/set_interaction/independent_verification.json",
+        "diagnostics": "research_v3/set_interaction/diagnostics.json",
+        "pre_fit_revision": "A mathematical check found symmetric G2 product cancellation before fitting. The declared fixed cyclic shift avoids that cancellation; no data-dependent shift search occurred.",
+        "interpretation": "The fixed feature map and directed cross-answer residual failed matched within-group controls. Independent reconstruction found no feature, pairing, gradient or export discrepancy. This does not rule out all set models or establish a unique cause; the residual complete-group loss differs from S subset augmentation.",
+        "decision": "Keep frozen numeric-surface S; prune this fixed recipe. No after-score feature,dimension,penalty,seed or fusion search. No report or public repository update."
+      }
+    },
+    {
+      "round": "quantity_flow",
+      "source_record": "research_v3/quantity_flow/ROUND_SUMMARY.json",
+      "source_record_sha256": "cae8b63285c57b17b261a9c03a7b08b5c13beeef6ed2b0bd1f326c1c05941e61",
+      "record": {
+        "status": "complete, primary not qualified",
+        "hard_questions": 1691,
+        "hard_correct": {
+          "S": 1392,
+          "format_only": 1396,
+          "local_arithmetic": 1410,
+          "quantity_bag": 1409,
+          "canonical_order": 1414,
+          "temporal_order": 1409
+        },
+        "temporal_gain_vs_S": 17,
+        "temporal_gain_vs_local": -1,
+        "temporal_gain_vs_bag": 0,
+        "temporal_gain_vs_canonical": -5,
+        "local_gain_vs_S": 18,
+        "local_fold_gains_vs_S": [
+          2,
+          3,
+          4,
+          6,
+          3
+        ],
+        "classifier_fits": 5,
+        "convex_residual_fits": 25,
+        "fresh_cpu_guards": 30,
+        "parent_independently_verified_fits": 30,
+        "new_gate_queries": 0,
+        "new_official_validation_evaluations": 0,
+        "new_official_test_evaluations": 0,
+        "public_model_changed": false,
+        "frozen_source_commit": "5ae1f48eba12bdd0d67a072e812ebbdae2a7fa50",
+        "source_branch": "v3/quantity-flow",
+        "evidence": "research_v3/quantity_flow/evidence.json",
+        "verification": "research_v3/quantity_flow/independent_verification.json",
+        "decision": "Reject the temporal-order primary. No control is promoted under this plan. Keep selected S while separately confirming the simpler local-arithmetic control on a new predeclared grouped development split; this follow-up is motivated by known development results, not independent discovery."
+      }
+    },
+    {
+      "round": "arithmetic_confirmation",
+      "source_record": "research_v3/arithmetic_confirmation/ROUND_SUMMARY.json",
+      "source_record_sha256": "39ad14dc0bcff42e30e30ff9067957dd54b7014c97435ba8ca23d6cee0fb4814",
+      "record": {
+        "status": "complete; separately qualified local candidate frozen",
+        "original_fivefold": {
+          "S": [
+            1392,
+            1691
+          ],
+          "local_arithmetic": [
+            1410,
+            1691
+          ],
+          "gain": 18,
+          "fold_gains": [
+            2,
+            3,
+            4,
+            6,
+            3
+          ],
+          "reused_existing_fits": true
+        },
+        "grouped_fivefold": {
+          "S": [
+            1383,
+            1691
+          ],
+          "local_arithmetic": [
+            1405,
+            1691
+          ],
+          "gain": 22,
+          "fold_gains": [
+            4,
+            3,
+            2,
+            8,
+            5
+          ],
+          "fixed": 34,
+          "broken": 12
+        },
+        "training_holdout": {
+          "S": [
+            346,
+            423
+          ],
+          "local_arithmetic": [
+            347,
+            423
+          ],
+          "gain": 1,
+          "fixed": 5,
+          "broken": 4,
+          "passed": true
+        },
+        "official_validation": {
+          "S": [
+            746,
+            798
+          ],
+          "local_arithmetic": [
+            751,
+            798
+          ],
+          "gain": 5,
+          "accuracy": 94.11027568922306,
+          "passed": true
+        },
+        "grouped_fits": {
+          "S": 5,
+          "residual": 5
+        },
+        "grouped_cpu_guards": 10,
+        "coordinator_fits": {
+          "S": 2,
+          "residual": 2
+        },
+        "scored_gate_candidate_queries": 1,
+        "new_official_validation_score_calls": 2,
+        "validation_calls_detail": "1 gate check plus1 packaged reproduction",
+        "official_test_evaluations": 0,
+        "training_holdout_cpu_guards": 2,
+        "official_validation_cpu_audits": 1,
+        "original_and_packaged_validation_choices_exact": true,
+        "inference_assets_bytes": 9157,
+        "fresh_original_validation_prediction_and_scoring_seconds": 1.3341262000012648,
+        "fresh_packaged_validation_prediction_and_scoring_seconds": 1.204461000000265,
+        "timing_scope": "Local CPU timing only; reference Xeon8457C not measured",
+        "candidate": "research_v3/artifacts/local_arithmetic_v1",
+        "candidate_branch": "v3/qualified-local-arithmetic",
+        "public_model_changed": false,
+        "report_generated": false,
+        "public_baseline": "numeric-surface-baseline-v1",
+        "sources": {
+          "quantity_flow": "5ae1f48eba12bdd0d67a072e812ebbdae2a7fa50",
+          "confirmation": "cf506c58de9508464ce4370e65e09e12ff722204",
+          "coordinator": "aaa8e1f"
+        },
+        "interpretation": "Unchanged simple residual improved both development split schemes and passed the predeclared gates. The holdout gain is only1question; this does not establish a reliable population improvement. The candidate was selected after development comparisons; the training holdout and officialvalidation have prior model-selection use. No new officialtest claim.",
+        "verification": "research_v3/arithmetic_confirmation/independent_verification.json"
+      }
+    },
+    {
+      "round": "crossfit_arithmetic",
+      "source_record": "research_v3/crossfit_arithmetic/ROUND_SUMMARY.json",
+      "source_record_sha256": "45f653e2640cec12bfd5fdebe31714bf1b01bb00831f63f062211d1538037a3f",
+      "record": {
+        "status": "complete; fixed crossfit-offset primary rejected",
+        "hard_questions": 1691,
+        "hard_correct": {
+          "S": 1392,
+          "local_arithmetic": 1410,
+          "matched_in_sample": 1410,
+          "crossfit": 1405
+        },
+        "crossfit_gain_vs_L": -5,
+        "crossfit_gain_vs_matched": -5,
+        "crossfit_fold_gains_vs_L": [
+          0,
+          -4,
+          -4,
+          0,
+          3
+        ],
+        "crossfit_fold_gains_vs_matched": [
+          0,
+          -4,
+          -4,
+          1,
+          2
+        ],
+        "crossfit_fixed_and_broken_vs_L": {
+          "fixed": 3,
+          "broken": 8
+        },
+        "nonworse_folds_vs_each_control": 3,
+        "primary_threshold": "gain>=10vsL and>=5vsmatched,each>=3nonworsefolds",
+        "qualified": false,
+        "S_classifier_fits": 20,
+        "S_fit_breakdown": {
+          "outer": 5,
+          "inner": 15
+        },
+        "residual_optimizer_fits": 15,
+        "fresh_cpu_guards": 20,
+        "parent_independently_verified_fits": 35,
+        "input_only_prefit_verified": true,
+        "outer_S_and_L_exact_archive_reproduction": true,
+        "seconds": 124.65467770000032,
+        "maximum_residual_gradient_inf_norm": 9.75050749891116e-07,
+        "source_branch": "v3/crossfit-arithmetic",
+        "source_freeze_commit": "daea02650b8ee1762388205a441b943582827d92",
+        "evidence_commit": "46a2d252c029e06a752bd9f93cd836b01eb454b8",
+        "evidence_sha256": "8ada5d8e9908f1224ca4b6a1d90f12a6593742926bd1c912037d2e6ffbf3a681",
+        "evidence": "research_v3/crossfit_arithmetic/original/evidence.json",
+        "verification": "research_v3/crossfit_arithmetic/independent_verification.json",
+        "grouped_confirmation_runs": 0,
+        "new_coordinator_gate_queries": 0,
+        "new_official_validation_evaluations": 0,
+        "new_official_test_evaluations": 0,
+        "qualified_local_candidate_changed": false,
+        "public_model_changed": false,
+        "report_generated": false,
+        "retained_qualified_candidate": "v3/qualified-local-arithmetic@8ed8f88de3d5ed039946aaf4bc923c6d5d23ef3f",
+        "retained_candidate_official_validation": [
+          751,
+          798
+        ],
+        "interpretation": "The tested inner-OOF offsets did not improve the unchanged22-dimensional residual above L or the matched in-sample offsets. Retain L. This result concerns the fixed offset recipe; it does not reject stacking in general. Inner S models use smaller fitting sets than the final S, so the design does not isolate every training-distribution effect.",
+        "references": [
+          "https://www.sciencedirect.com/science/article/pii/S0893608005800231",
+          "https://biostats.bepress.com/ucbbiostat/paper222/"
+        ]
+      }
+    },
+    {
+      "round": "joint_surface_arithmetic",
+      "source_record": "research_v3/joint_surface_arithmetic/ROUND_SUMMARY.json",
+      "source_record_sha256": "bbe9514443d07cf524b34acec496bc64e9af4b537f8e6b3a1a3ea42d080f358b",
+      "record": {
+        "status": "complete; fixed joint-subsets primary did not qualify",
+        "hard_questions": 1691,
+        "hard_correct": {
+          "S": 1392,
+          "local_arithmetic": 1410,
+          "joint_full": 1399,
+          "joint_subsets": 1410
+        },
+        "primary_gain_vs_L": 0,
+        "primary_gain_vs_joint_full": 11,
+        "primary_fold_gains_vs_L": [
+          4,
+          -2,
+          -3,
+          0,
+          1
+        ],
+        "primary_fold_gains_vs_joint_full": [
+          1,
+          4,
+          4,
+          1,
+          1
+        ],
+        "primary_fixed_and_broken_vs_L": {
+          "fixed": 17,
+          "broken": 17
+        },
+        "primary_fixed_and_broken_vs_joint_full": {
+          "fixed": 40,
+          "broken": 29
+        },
+        "qualification": "Require joint_subsets gain>=10vsL, gain>=5vsjoint_full, and>=3nonworsefolds against each control",
+        "qualified": false,
+        "fit_counts": {
+          "S": 5,
+          "local_arithmetic": 5,
+          "joint_full": 5,
+          "joint_subsets": 5
+        },
+        "fresh_cpu_guards": 20,
+        "parent_independently_verified_fits": 20,
+        "audit_optimizer_calls": 0,
+        "input_only_prefit_verified": true,
+        "S_and_L_exact_archive_reproduction": true,
+        "all_source_and_retained_raw_hashes_verified": true,
+        "source_branch": "v3/joint-surface-arithmetic",
+        "source_freeze_commit": "287dcec25c131f7a87190d57c2e27ae4269b22b4",
+        "evidence_commit": "b3d8046bebc516072fb866bb7486b2f9081ad5e2",
+        "evidence_sha256": "a57ce7c1991b677584650b0640ce35ba53c28b4f8c077d754afcec477d7f8c7e",
+        "evidence": "research_v3/joint_surface_arithmetic/original/evidence.json",
+        "diagnostics": "research_v3/joint_surface_arithmetic/original/diagnostics.json",
+        "verification": "research_v3/joint_surface_arithmetic/independent_verification.json",
+        "grouped_confirmation_runs": 0,
+        "new_coordinator_gate_queries": 0,
+        "new_official_validation_evaluations": 0,
+        "new_official_test_evaluations": 0,
+        "qualified_local_candidate_changed": false,
+        "public_model_changed": false,
+        "report_generated": false,
+        "retained_qualified_candidate": "v3/qualified-local-arithmetic@8ed8f88de3d5ed039946aaf4bc923c6d5d23ef3f",
+        "retained_candidate_official_validation": [
+          751,
+          798
+        ],
+        "retained_candidate_official_test_evaluated": false,
+        "interpretation": "At the fixed feature set and penalty, joint training with subset augmentation tied two-stage L. Subset augmentation improved the jointly fitted full-group control by11hard correct across all5folds. It did not improve L:17fixed and17broken. This comparison does not establish that freezing is generally superior, because loss provenance and block regularization also differ. The predeclared primary failed; no grouped or coordinator evaluation follows.",
+        "timing_scope": "CPU checks measure this local host, not the official reference CPU."
+      }
+    },
+    {
+      "round": "affine_consistency",
+      "source_record": "research_v3/affine_consistency/ROUND_SUMMARY.json",
+      "source_record_sha256": "65b08106ff8995f8b6701c3148a5da717f39901ca7a6455dac4e6e6bd0179241",
+      "record": {
+        "status": "complete; exploratory positive gain below fixed admission thresholds",
+        "hard_questions": 1691,
+        "hard_correct": {
+          "S": 1392,
+          "local_arithmetic": 1410,
+          "symbolic_coverage": 1412,
+          "affine_consistency": 1416
+        },
+        "primary_hard_accuracy": 83.73743347131875,
+        "primary_gains_vs_controls": {
+          "local_arithmetic": 6,
+          "symbolic_coverage": 4
+        },
+        "primary_fixed_and_broken_vs_L": {
+          "fixed": 9,
+          "broken": 3,
+          "net_correct": 6
+        },
+        "primary_fixed_and_broken_vs_coverage": {
+          "fixed": 7,
+          "broken": 3,
+          "net_correct": 4
+        },
+        "primary_fold_gains": {
+          "local_arithmetic": [
+            0,
+            1,
+            -1,
+            3,
+            3
+          ],
+          "symbolic_coverage": [
+            -1,
+            1,
+            -1,
+            3,
+            2
+          ]
+        },
+        "primary_nonworse_folds": {
+          "local_arithmetic": 4,
+          "symbolic_coverage": 3
+        },
+        "qualification": "Require affine_consistency>=L+10 and coverage+5,with>=3nonworsefolds against both",
+        "qualified": false,
+        "fit_counts": {
+          "S": 5,
+          "residual": 15,
+          "cpu_guards": 20
+        },
+        "parent_independently_verified_fits": 20,
+        "optimizer_calls_in_parent_audit": 0,
+        "S_and_L_exact_archive_reproduction": true,
+        "all_equations_checks_and_input_features_independently_verified": true,
+        "input_only_readiness": {
+          "hard_with_valid_same_symbol_repeated_solutions": 274,
+          "hard_with_varying_consistency_across_original_groups": 53,
+          "all_candidate_traces_verified": 15216,
+          "accepted_equations_verified": 6310,
+          "cancellation_and_solution_pair_checks_verified": 6752,
+          "maximum_feature_error": 0.0
+        },
+        "original_run_seconds": 121.2249082000053,
+        "primary_inference_assets_uncompressed_bytes": 9434,
+        "primary_fold_prediction_seconds_excluding_startup_and_inputs_range": [
+          1.3196160000006785,
+          1.454837499994028
+        ],
+        "reference_CPU_measured": false,
+        "extractor_source_freeze_commit": "e0932b58f510e15e9eb7a5864081c0c55eda0d65",
+        "model_source_freeze_commit": "83628ed1040aa4eb95cb701d7cfff8fdd52b821e",
+        "evidence_commit": "f5a15548965478e5343581c5e00c737271d8f8ae",
+        "source_branch": "v3/affine-consistency",
+        "evidence_sha256": "6cc902a188974a0ac8aa86933b8105f22530767e0e5fba4c1c496fa6f137723c",
+        "input_only_strata_diagnostics": {
+          "false": {
+            "all": {
+              "symbolic_coverage": {
+                "questions": 3751,
+                "changed_parsed_answer_vs_L": 3,
+                "correct": 3481,
+                "L_correct": 3479,
+                "fixed_vs_L": 2,
+                "broken_vs_L": 0,
+                "net_vs_L": 2
+              },
+              "affine_consistency": {
+                "questions": 3751,
+                "changed_parsed_answer_vs_L": 7,
+                "correct": 3481,
+                "L_correct": 3479,
+                "fixed_vs_L": 4,
+                "broken_vs_L": 2,
+                "net_vs_L": 2
+              }
+            },
+            "hard": {
+              "symbolic_coverage": {
+                "questions": 1638,
+                "changed_parsed_answer_vs_L": 3,
+                "correct": 1368,
+                "L_correct": 1366,
+                "fixed_vs_L": 2,
+                "broken_vs_L": 0,
+                "net_vs_L": 2
+              },
+              "affine_consistency": {
+                "questions": 1638,
+                "changed_parsed_answer_vs_L": 7,
+                "correct": 1368,
+                "L_correct": 1366,
+                "fixed_vs_L": 4,
+                "broken_vs_L": 2,
+                "net_vs_L": 2
+              }
+            }
+          },
+          "true": {
+            "all": {
+              "symbolic_coverage": {
+                "questions": 53,
+                "changed_parsed_answer_vs_L": 1,
+                "correct": 44,
+                "L_correct": 44,
+                "fixed_vs_L": 0,
+                "broken_vs_L": 0,
+                "net_vs_L": 0
+              },
+              "affine_consistency": {
+                "questions": 53,
+                "changed_parsed_answer_vs_L": 6,
+                "correct": 48,
+                "L_correct": 44,
+                "fixed_vs_L": 5,
+                "broken_vs_L": 1,
+                "net_vs_L": 4
+              }
+            },
+            "hard": {
+              "symbolic_coverage": {
+                "questions": 53,
+                "changed_parsed_answer_vs_L": 1,
+                "correct": 44,
+                "L_correct": 44,
+                "fixed_vs_L": 0,
+                "broken_vs_L": 0,
+                "net_vs_L": 0
+              },
+              "affine_consistency": {
+                "questions": 53,
+                "changed_parsed_answer_vs_L": 6,
+                "correct": 48,
+                "L_correct": 44,
+                "fixed_vs_L": 5,
+                "broken_vs_L": 1,
+                "net_vs_L": 4
+              }
+            }
+          }
+        },
+        "grouped_confirmation_runs": 0,
+        "new_coordinator_gate_queries": 0,
+        "new_official_validation_evaluations": 0,
+        "new_official_test_evaluations": 0,
+        "qualified_local_candidate_changed": false,
+        "public_model_changed": false,
+        "report_generated": false,
+        "retained_qualified_candidate": "v3/qualified-local-arithmetic@8ed8f88de3d5ed039946aaf4bc923c6d5d23ef3f",
+        "retained_candidate_official_validation": [
+          751,
+          798
+        ],
+        "retained_candidate_official_test_evaluated": false,
+        "interpretation": "The fixed affine block added6hard correct versus L and4versus the equation-coverage control on the original development folds. It corrected9andbroke3 L choices. These positive exploratory gains fell below both predeclared admission thresholds;do not promote or query grouped/heldout/official evaluation. The primary combines consistency4 and last-inferred-solution/final-answer features3;the control contrast does not isolate contradictions. Same-symbol reuse can cause false alarms. Retain the checker and branch for future separately declared work without claiming confirmed generalization.",
+        "evidence": "research_v3/affine_consistency/original/evidence.json",
+        "verification": "research_v3/affine_consistency/independent_verification.json",
+        "readiness_verification": "research_v3/affine_consistency/independent_verification_readiness.json",
+        "resources": "research_v3/affine_consistency/resources.json",
+        "references": [
+          "https://proceedings.mlr.press/v202/gao23f.html",
+          "https://arxiv.org/abs/2305.20050"
+        ]
+      }
+    },
+    {
+      "round": "affine_ablation",
+      "source_record": "research_v3/affine_ablation/ROUND_SUMMARY.json",
+      "source_record_sha256": "aae69bbac5bdb9110eef06ce7223147e8c00f5d6e79d5395a945de57bd2a5a4e",
+      "record": {
+        "status": "complete; fixed diagnostic factorial ablation independently audited;no promotion",
+        "purpose": "Separate consistency4 and final-match3 under the frozen extractor,optimizer and original5fold protocol.",
+        "hard_questions": 1691,
+        "hard_correct": {
+          "local_arithmetic": 1410,
+          "symbolic_coverage": 1412,
+          "consistency_only": 1416,
+          "final_match_only": 1415,
+          "affine_consistency": 1416
+        },
+        "fold_hard_correct": {
+          "local_arithmetic": [
+            270,
+            297,
+            289,
+            291,
+            263
+          ],
+          "symbolic_coverage": [
+            271,
+            297,
+            289,
+            291,
+            264
+          ],
+          "consistency_only": [
+            271,
+            298,
+            288,
+            292,
+            267
+          ],
+          "final_match_only": [
+            271,
+            296,
+            290,
+            292,
+            266
+          ],
+          "affine_consistency": [
+            270,
+            298,
+            288,
+            294,
+            266
+          ]
+        },
+        "contrasts": {
+          "pooled_hard": {
+            "C_minus_B": 4,
+            "A_minus_F": 1,
+            "F_minus_B": 3,
+            "A_minus_C": 0,
+            "A_minus_C_minus_F_plus_B": -3
+          },
+          "fold_hard": [
+            {
+              "C_minus_B": 0,
+              "A_minus_F": -1,
+              "F_minus_B": 0,
+              "A_minus_C": -1,
+              "A_minus_C_minus_F_plus_B": -1
+            },
+            {
+              "C_minus_B": 1,
+              "A_minus_F": 2,
+              "F_minus_B": -1,
+              "A_minus_C": 0,
+              "A_minus_C_minus_F_plus_B": 1
+            },
+            {
+              "C_minus_B": -1,
+              "A_minus_F": -2,
+              "F_minus_B": 1,
+              "A_minus_C": 0,
+              "A_minus_C_minus_F_plus_B": -1
+            },
+            {
+              "C_minus_B": 1,
+              "A_minus_F": 2,
+              "F_minus_B": 1,
+              "A_minus_C": 2,
+              "A_minus_C_minus_F_plus_B": 1
+            },
+            {
+              "C_minus_B": 3,
+              "A_minus_F": 0,
+              "F_minus_B": 2,
+              "A_minus_C": -1,
+              "A_minus_C_minus_F_plus_B": -3
+            }
+          ]
+        },
+        "new_variant_pairings": {
+          "consistency_only": {
+            "local_arithmetic": {
+              "fixed": 8,
+              "broken": 2,
+              "net_correct": 6,
+              "changed_parsed_answers": 11
+            },
+            "symbolic_coverage": {
+              "fixed": 6,
+              "broken": 2,
+              "net_correct": 4,
+              "changed_parsed_answers": 8
+            },
+            "affine_consistency": {
+              "fixed": 2,
+              "broken": 2,
+              "net_correct": 0,
+              "changed_parsed_answers": 4
+            }
+          },
+          "final_match_only": {
+            "local_arithmetic": {
+              "fixed": 6,
+              "broken": 1,
+              "net_correct": 5,
+              "changed_parsed_answers": 9
+            },
+            "symbolic_coverage": {
+              "fixed": 4,
+              "broken": 1,
+              "net_correct": 3,
+              "changed_parsed_answers": 5
+            },
+            "affine_consistency": {
+              "fixed": 6,
+              "broken": 7,
+              "net_correct": -1,
+              "changed_parsed_answers": 13
+            }
+          }
+        },
+        "group_hard_correct": {
+          "local_arithmetic": {
+            "G2": 957,
+            "G3": 359,
+            "G4": 94
+          },
+          "symbolic_coverage": {
+            "G2": 959,
+            "G3": 359,
+            "G4": 94
+          },
+          "consistency_only": {
+            "G2": 963,
+            "G3": 359,
+            "G4": 94
+          },
+          "final_match_only": {
+            "G2": 961,
+            "G3": 360,
+            "G4": 94
+          },
+          "affine_consistency": {
+            "G2": 964,
+            "G3": 359,
+            "G4": 93
+          }
+        },
+        "fit_counts": {
+          "S": 0,
+          "control_refits": 0,
+          "residual": 10,
+          "cpu_guards": 10
+        },
+        "parent_independently_verified_new_fits": 10,
+        "parent_audit_optimizer_calls": 0,
+        "fresh_cpu_guards": 10,
+        "archived_control_checkpoint_prediction_recomputations": 20,
+        "archived_control_raw_files_hashed": 259,
+        "inactive_scalers_designs_gradients_and_coefficients_exact_zero": true,
+        "full_feature_cache_unchanged": true,
+        "original_run_seconds": 104.85771190000014,
+        "new_checkpoint_assets_uncompressed_bytes": {
+          "consistency_only": 9434,
+          "final_match_only": 9434
+        },
+        "active_group_dimensions": {
+          "consistency_only": 38,
+          "final_match_only": 36,
+          "full_affine": 44
+        },
+        "inference_implementation": "Unchanged full affine NumPy inference and44-coordinate checkpoint with exact-zero deleted-block weights. No faster extractor or inference saving was established.",
+        "reference_CPU_measured": false,
+        "local_hardware_record": "research_v3/affine_consistency/resources.json",
+        "plan_sha256": "043beee070dfe1625789787b0e943867359e636b4ed666e9044b4bb41aeac372",
+        "plan_format_repair": "research_v3/affine_ablation/PLAN_FORMAT_REPAIR.json",
+        "source_freeze_commit": "a50ad42525623e750b7bb7df8b0e3fcc51a167ad",
+        "evidence_commit": "6d066e2e9ea780701e3b124efc9b7f8ab80dc39e",
+        "source_branch": "v3/affine-ablation",
+        "evidence_sha256": "927478460b9bfc239f2d84af75d8aea58f053260ca652be6168e1860be9ce653",
+        "grouped_confirmation_runs": 0,
+        "new_coordinator_gate_queries": 0,
+        "new_official_validation_evaluations": 0,
+        "new_official_test_evaluations": 0,
+        "candidate_promoted": false,
+        "qualified_local_candidate_changed": false,
+        "public_model_changed": false,
+        "report_generated": false,
+        "retained_qualified_candidate": "v3/qualified-local-arithmetic@8ed8f88de3d5ed039946aaf4bc923c6d5d23ef3f",
+        "retained_candidate_official_validation": [
+          751,
+          798
+        ],
+        "retained_candidate_official_test_evaluated": false,
+        "interpretation": "C and F separately gain4and3hard correct over coverageB,while fullA gains4. C ties A but changes4parsedanswers,fixing2andbreaking2. A versus F fixes7andbreaks6 for only1netcorrect. These descriptive independently fitted contrasts suggest overlapping information or model interactions;they do not establish causal contributions or reliable dominance. C retains full aggregate accuracy using fewer active coordinates. No candidate is admitted from this diagnostic study. Preserve L;any follow-up must be separately declared.",
+        "evidence": "research_v3/affine_ablation/evidence.json",
+        "verification": "research_v3/affine_ablation/independent_verification.json",
+        "diagnostics": "research_v3/affine_ablation/diagnostics.json"
+      }
+    },
+    {
+      "round": "frozen_local_affine",
+      "source_record": "research_v3/frozen_local_affine/ROUND_SUMMARY.json",
+      "source_record_sha256": "a961ee3a235c2db4e7d0531092b9fba338d14de9d29c7e2e1b4c911cb681d1cd",
+      "record": {
+        "status": "complete; independently audited primary screen failed; no promotion",
+        "hypothesis": "Learn only new affine-feature corrections while all archived L weights remain fixed.",
+        "hard_questions": 1691,
+        "hard_correct": {
+          "S": 1392,
+          "local_arithmetic": 1410,
+          "symbolic_coverage": 1412,
+          "affine_consistency": 1416,
+          "frozen_local_coverage": 1412,
+          "frozen_local_affine": 1415
+        },
+        "fold_hard_correct": {
+          "S": [
+            268,
+            294,
+            285,
+            285,
+            260
+          ],
+          "local_arithmetic": [
+            270,
+            297,
+            289,
+            291,
+            263
+          ],
+          "symbolic_coverage": [
+            271,
+            297,
+            289,
+            291,
+            264
+          ],
+          "affine_consistency": [
+            270,
+            298,
+            288,
+            294,
+            266
+          ],
+          "frozen_local_coverage": [
+            272,
+            297,
+            289,
+            291,
+            263
+          ],
+          "frozen_local_affine": [
+            270,
+            298,
+            289,
+            293,
+            265
+          ]
+        },
+        "primary_pairings": {
+          "local_arithmetic": {
+            "fixed": 7,
+            "broken": 2,
+            "net_correct": 5,
+            "changed_parsed_answers": 9
+          },
+          "frozen_local_coverage": {
+            "fixed": 6,
+            "broken": 3,
+            "net_correct": 3,
+            "changed_parsed_answers": 9
+          },
+          "affine_consistency": {
+            "fixed": 1,
+            "broken": 2,
+            "net_correct": -1,
+            "changed_parsed_answers": 4
+          }
+        },
+        "group_hard_correct": {
+          "S": {
+            "G2": 954,
+            "G3": 350,
+            "G4": 88
+          },
+          "local_arithmetic": {
+            "G2": 957,
+            "G3": 359,
+            "G4": 94
+          },
+          "symbolic_coverage": {
+            "G2": 959,
+            "G3": 359,
+            "G4": 94
+          },
+          "affine_consistency": {
+            "G2": 964,
+            "G3": 359,
+            "G4": 93
+          },
+          "frozen_local_coverage": {
+            "G2": 958,
+            "G3": 360,
+            "G4": 94
+          },
+          "frozen_local_affine": {
+            "G2": 962,
+            "G3": 360,
+            "G4": 93
+          }
+        },
+        "qualification": {
+          "net_vs_L": 5,
+          "net_vs_coverage": 3,
+          "nonworse_folds_vs_L": 5,
+          "nonworse_folds_vs_coverage": 4,
+          "passed": false,
+          "promoted": false,
+          "confirmation_requires_separate_authorization": true
+        },
+        "locality": {
+          "frozen_local_coverage": {
+            "questions": 2994,
+            "hard_questions": 1324,
+            "exact_L_scores": true,
+            "changed_answers": {
+              "overall": {
+                "fixed": 0,
+                "broken": 0,
+                "net_correct": 0,
+                "changed_parsed_answers": 0
+              },
+              "disagreement": {
+                "fixed": 0,
+                "broken": 0,
+                "net_correct": 0,
+                "changed_parsed_answers": 0
+              }
+            }
+          },
+          "frozen_local_affine": {
+            "questions": 2994,
+            "hard_questions": 1324,
+            "exact_L_scores": true,
+            "changed_answers": {
+              "overall": {
+                "fixed": 0,
+                "broken": 0,
+                "net_correct": 0,
+                "changed_parsed_answers": 0
+              },
+              "disagreement": {
+                "fixed": 0,
+                "broken": 0,
+                "net_correct": 0,
+                "changed_parsed_answers": 0
+              }
+            }
+          }
+        },
+        "fit_counts": {
+          "S": 0,
+          "control_refits": 0,
+          "residual": 10,
+          "cpu_guards": 10
+        },
+        "parent_independently_verified_new_fits": 10,
+        "parent_optimizer_calls": 0,
+        "archived_control_prediction_recomputations": 20,
+        "archived_control_raw_files_hashed": 259,
+        "fixed_local_weights_and_anchor_exact": true,
+        "inactive_correction_coordinates_exact_zero": true,
+        "original_run_seconds": 139.74588389999917,
+        "assets_uncompressed_bytes": {
+          "frozen_local_coverage": [
+            9434,
+            9434,
+            9434,
+            9434,
+            9434
+          ],
+          "frozen_local_affine": [
+            9434,
+            9434,
+            9434,
+            9434,
+            9434
+          ]
+        },
+        "local_hardware_record": "research_v3/affine_consistency/resources.json",
+        "reference_CPU_measured": false,
+        "source_freeze_commit": "d6fdcdab1354d187d55c3216630a87fb19d42c61",
+        "evidence_commit": "dca9b2615031bcbb215a64c2933b96b929df1e14",
+        "source_branch": "v3/frozen-local-affine",
+        "plan_sha256": "bac8b869243298ab421d51e54f3508feb2cd455169ad100a7596799243938165",
+        "evidence_sha256": "18d306e5e5ac44796911b192bae7f4ff4049f0dc526ff1ef965ec43521f0d3a2",
+        "raw_files_verified": 180,
+        "raw_bytes": 77407468,
+        "grouped_confirmation_runs": 0,
+        "new_coordinator_gate_queries": 0,
+        "new_official_validation_evaluations": 0,
+        "new_official_test_evaluations": 0,
+        "candidate_promoted": false,
+        "qualified_local_candidate_changed": false,
+        "public_model_changed": false,
+        "report_generated": false,
+        "retained_qualified_candidate": "v3/qualified-local-arithmetic@8ed8f88de3d5ed039946aaf4bc923c6d5d23ef3f",
+        "retained_candidate_official_validation": [
+          751,
+          798
+        ],
+        "retained_candidate_official_test_evaluated": false,
+        "interpretation": "Freezing old weights preserves exact L scores on 2994 questions, including 1324 hard questions, with no new affine features. The primary fixes 7 and breaks 2 versus L for a net gain of 5, and gains 3 over fixed-local coverage. It answers 1 fewer question correctly than the prior refitted affine model and misses both fixed gain thresholds. This study does not establish old-weight refitting as the main bottleneck or reliable superiority between models differing by 1 question. Preserve L; no grouped or heldout confirmation was run.",
+        "evidence": "research_v3/frozen_local_affine/evidence.json",
+        "verification": "research_v3/frozen_local_affine/independent_verification.json",
+        "diagnostics": "research_v3/frozen_local_affine/diagnostics.json"
+      }
+    },
+    {
+      "round": "multivariate_readiness",
+      "source_record": "research_v3/multivariate_readiness/ROUND_SUMMARY.json",
+      "source_record_sha256": "51e74944972aa0b5409040ecf79c39e5735e6588d55c29fdc45e2af6bb876d1d",
+      "record": {
+        "status": "complete; failed input-only opportunity screen; no model trained",
+        "date_utc_plus_8": "2026-10-25",
+        "method": "Bounded multivariate substitution using nearest singleton assignments in the same paragraph and an eight-line joint span.",
+        "development_questions": 3804,
+        "hard_questions": 1691,
+        "candidate_texts": 15216,
+        "hard_with_new_check": 5,
+        "required_hard_with_new_check": 100,
+        "hard_with_varying_consistency": 5,
+        "required_hard_with_varying_consistency": 30,
+        "readiness_passed": false,
+        "independent_audit_passed": true,
+        "totals": {
+          "accepted_records": 7244,
+          "multivariate_records": 934,
+          "new_substitution_checks": 20,
+          "mismatching_checks": 14,
+          "skipped_reasons": {
+            "missing_singleton_assignment": 914
+          }
+        },
+        "new_training_fits": 0,
+        "reference_rows_decoded": 0,
+        "optimizer_calls": 0,
+        "new_official_validation_evaluations": 0,
+        "new_official_test_evaluations": 0,
+        "source_freeze_commit": "55222847cddbe86d3f2d42f9a77f3c0f4afff50f",
+        "evidence_commit": "3d0c3bc9e8da7831692fac1a29389e3ff11a99d7",
+        "source_branch": "v3/multivariate-readiness",
+        "plan_sha256": "212a5fa75350404cf2a5d2433843c455425b6b95823bdcb17188b8934762bcbf",
+        "readiness_sha256": "4b20e49fe25e26b950619846627cd4a7d0c1ec3b0a4052abc526e54a418cedb2",
+        "interpretation": "The fixed local substitution rule finds too few checkable hard questions to justify fitting. Most multivariate targets lack explicit singleton assignments. This does not rule out general linear-system solvers or other representations and does not estimate answer accuracy.",
+        "retained_candidate": "v3/qualified-local-arithmetic@8ed8f88de3d5ed039946aaf4bc923c6d5d23ef3f",
+        "candidate_promoted": false,
+        "public_model_changed": false,
+        "report_generated": false,
+        "evidence": "research_v3/multivariate_readiness/readiness.json",
+        "verification": "research_v3/multivariate_readiness/independent_verification.json"
+      }
+    },
+    {
+      "round": "reliability_analysis",
+      "source_record": "research_v3/reliability_analysis/ROUND_SUMMARY.json",
+      "source_record_sha256": "e95b0a2a0473f7e41f03c020de8c69d43d5b4d7de8383ea13303505f67f51e62",
+      "record": {
+        "status": "complete; independently verified descriptive OOF analysis",
+        "date_utc_plus_8": "2026-10-25",
+        "hard_questions": 1691,
+        "L_hard_correct": 1410,
+        "S_hard_correct": 1392,
+        "gap_AUROC_for_correctness": {
+          "S": 0.8132159881597663,
+          "local_arithmetic": 0.8132833598344312
+        },
+        "L_highest_gap_coverage": [
+          {
+            "target_percent": 100,
+            "cutoff": 0.0075005819770019855,
+            "actual_percent": 100.0,
+            "n": 1691,
+            "correct": 1410,
+            "wrong": 281,
+            "accuracy": 83.3826138379657
+          },
+          {
+            "target_percent": 90,
+            "cutoff": 0.36405589331474886,
+            "actual_percent": 90.00591366055589,
+            "n": 1522,
+            "correct": 1324,
+            "wrong": 198,
+            "accuracy": 86.99080157687254
+          },
+          {
+            "target_percent": 75,
+            "cutoff": 0.9796925729150701,
+            "actual_percent": 75.04435245416913,
+            "n": 1269,
+            "correct": 1159,
+            "wrong": 110,
+            "accuracy": 91.33175728920409
+          },
+          {
+            "target_percent": 50,
+            "cutoff": 2.1677689167449987,
+            "actual_percent": 50.02956830277942,
+            "n": 846,
+            "correct": 811,
+            "wrong": 35,
+            "accuracy": 95.86288416075651
+          },
+          {
+            "target_percent": 25,
+            "cutoff": 3.9634021773286303,
+            "actual_percent": 25.01478415138971,
+            "n": 423,
+            "correct": 420,
+            "wrong": 3,
+            "accuracy": 99.29078014184397
+          },
+          {
+            "target_percent": 10,
+            "cutoff": 5.847963715822489,
+            "actual_percent": 10.053222945002958,
+            "n": 170,
+            "correct": 170,
+            "wrong": 0,
+            "accuracy": 100.0
+          }
+        ],
+        "L_fixed_gap_bins": [
+          {
+            "left": 0.0,
+            "right": 0.25,
+            "n": 115,
+            "correct": 54,
+            "wrong": 61,
+            "accuracy": 46.95652173913044
+          },
+          {
+            "left": 0.25,
+            "right": 0.5,
+            "n": 103,
+            "correct": 60,
+            "wrong": 43,
+            "accuracy": 58.25242718446602
+          },
+          {
+            "left": 0.5,
+            "right": 1.0,
+            "n": 209,
+            "correct": 142,
+            "wrong": 67,
+            "accuracy": 67.94258373205741
+          },
+          {
+            "left": 1.0,
+            "right": 2.0,
+            "n": 363,
+            "correct": 295,
+            "wrong": 68,
+            "accuracy": 81.26721763085399
+          },
+          {
+            "left": 2.0,
+            "right": 4.0,
+            "n": 482,
+            "correct": 443,
+            "wrong": 39,
+            "accuracy": 91.90871369294605
+          },
+          {
+            "left": 4.0,
+            "right": 8.0,
+            "n": 378,
+            "correct": 375,
+            "wrong": 3,
+            "accuracy": 99.2063492063492
+          },
+          {
+            "left": 8.0,
+            "right": "infinity",
+            "n": 41,
+            "correct": 41,
+            "wrong": 0,
+            "accuracy": 100.0
+          }
+        ],
+        "model_agreement": {
+          "agree": {
+            "n": 1638,
+            "both_correct": 1377,
+            "S_only_correct": 0,
+            "L_only_correct": 0,
+            "both_wrong": 261,
+            "S_accuracy": 84.06593406593407,
+            "L_accuracy": 84.06593406593407
+          },
+          "disagree": {
+            "n": 53,
+            "both_correct": 0,
+            "S_only_correct": 15,
+            "L_only_correct": 33,
+            "both_wrong": 5,
+            "S_accuracy": 28.30188679245283,
+            "L_accuracy": 62.264150943396224
+          }
+        },
+        "L_errors": 281,
+        "common_wrong": 261,
+        "common_wrong_share_of_L_errors": 0.9288256227758007,
+        "hypothetical_oracle_for_selecting_between_the_two_existing_answers": {
+          "hard_correct": 1425,
+          "n": 1691,
+          "extra_correct_over_L": 15,
+          "implementable_without_labels": false
+        },
+        "training_fits": 0,
+        "calibration_fits": 0,
+        "new_official_validation_evaluations": 0,
+        "new_official_test_evaluations": 0,
+        "interpretation": "The raw gap is informative on this development pool but is not a calibrated probability. Retaining the largest gaps raises conditional accuracy while leaving many questions unanswered, so these selective figures are not official full-bank scores. L improves selection accuracy over S, while pooled gap AUROC is almost unchanged. Both models share most errors. These post-selection OOF diagnostics do not establish independent generalization.",
+        "evidence": "research_v3/reliability_analysis/evidence.json",
+        "verification": "research_v3/reliability_analysis/independent_verification.json",
+        "public_model_changed": false,
+        "report_generated": false,
+        "same_wrong_numeric_answer_in_both_models": 261,
+        "both_models_wrong_including_different_answers": 266,
+        "common_wrong_scope": "261 identical wrong answers among agreement cases; another5disagreement cases are wrong in both models.",
+        "share_of_L_errors_also_wrong_for_S": 0.9466192170818505
+      }
+    },
+    {
+      "round": "submission_reproduction",
+      "source_record": "research_v3/submission_reproduction/ROUND_SUMMARY.json",
+      "source_record_sha256": "aa6807b124b9f1000e898545e13d62ad6b6b9ac63319913023a33fad9c718f81",
+      "record": {
+        "status": "complete; clean local package reproduced and ready for review; final test and publication deferred",
+        "date_utc_plus_8": "2026-10-25",
+        "local_branch": "local/qualified-arithmetic-v2",
+        "local_package_commit": "22b7e083034457a1c2505e8d2a6c28b6d5575475",
+        "original_candidate_commit": "8ed8f88de3d5ed039946aaf4bc923c6d5d23ef3f",
+        "public_main_unchanged_commit": "a1973666c71c4ba72a1183b337043f8fb050c06e",
+        "training_reproduction": {
+          "full_train_rows": 4755,
+          "cold_full_fits": {
+            "S": 1,
+            "residual": 1
+          },
+          "CV_fits": {
+            "S": 5,
+            "residual": 5
+          },
+          "total_actual_model_fits": 12,
+          "new_model_searches": 0,
+          "complete_checkpoint_bytes_exact": true,
+          "independent_pairs_scalers_objectives_gradients_verified": true,
+          "all50CVfit_array_artifacts_exact": true,
+          "all_S_and_L_OOF_scores_bit_exact": true,
+          "OOF_hard_correct": {
+            "S": 1392,
+            "local_arithmetic": 1410
+          }
+        },
+        "validation": {
+          "correct": 751,
+          "n": 798,
+          "accuracy": 94.11027568922306,
+          "all_selected_indices_and_IDs_exact": true,
+          "new_score_calls": 2,
+          "clean_environment": "Python3.12.14 and NumPy2.3.5; no SciPy,scikit-learn or torch",
+          "clean_external_seconds": 1.4045408999991196
+        },
+        "CPU_guards": 2,
+        "active_inference_asset_bytes": 9157,
+        "all_packaged_checkpoint_bytes_including_unused_historical_S": 18246,
+        "reference_CPU_measured": false,
+        "source_review": "research_v3/submission_reproduction/source_review.json",
+        "independent_fulltrain_audit": "research_v3/submission_reproduction/independent_fulltrain_verification.json",
+        "independent_CV_audit": "research_v3/submission_reproduction/independent_cv_verification.json",
+        "clean_environment_audit": "research_v3/submission_reproduction/clean_environment_verification.json",
+        "local_package": "research_v3/submission_reproduction/final_local_package.json",
+        "archive": "E:\\a-HKU\\7506\\DASE7506-MP2-main\\dist\\local-arithmetic-v2-review-22b7e083.zip",
+        "archive_sha256": "b8819780066a1225f672450569f1755c6f39bb3905a042aa541cb971a179d7bd",
+        "new_official_test_evaluations": 0,
+        "public_repository_changed": false,
+        "report_generated": false,
+        "leaderboard_issue_created": false,
+        "remaining": [
+          "Freeze the terminal method and settings, then perform official test evaluation without using its result for selection.",
+          "Publish the matching clean code/checkpoint and verify unauthenticated downloads when publication is requested.",
+          "Complete the report and final GitHub submission issue; the report remains paused by the user."
+        ]
+      }
+    }
+  ]
+}

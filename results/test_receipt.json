@@ -1,0 +1,66 @@
+{
+  "split": "test",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "cpu_numeric_threads_limit": 4,
+  "cuda_visible_devices": "",
+  "commands": [
+    [
+      "E:\\a-HKU\\7506\\DASE7506-MP2-main\\.arbor\\clean-local-arithmetic-v2\\env\\Scripts\\python.exe",
+      "-B",
+      "E:\\a-HKU\\7506\\DASE7506-MP2-main\\.arbor\\worktrees\\v3-local-submission\\src\\predict.py",
+      "--method",
+      "E:\\a-HKU\\7506\\DASE7506-MP2-main\\.arbor\\worktrees\\v3-local-submission\\src\\submission.py",
+      "--checkpoint",
+      "E:\\a-HKU\\7506\\DASE7506-MP2-main\\.arbor\\worktrees\\v3-local-submission\\checkpoint",
+      "--data-dir",
+      "E:\\a-HKU\\7506\\DASE7506-MP2-main\\code\\data",
+      "--split",
+      "test",
+      "--output",
+      "E:\\a-HKU\\7506\\DASE7506-MP2-main\\.arbor\\worktrees\\v3-local-submission\\runs\\final-test-L\\predictions.json"
+    ],
+    [
+      "E:\\a-HKU\\7506\\DASE7506-MP2-main\\.arbor\\clean-local-arithmetic-v2\\env\\Scripts\\python.exe",
+      "-B",
+      "E:\\a-HKU\\7506\\DASE7506-MP2-main\\.arbor\\worktrees\\v3-local-submission\\src\\score_predictions.py",
+      "--data-dir",
+      "E:\\a-HKU\\7506\\DASE7506-MP2-main\\code\\data",
+      "--split",
+      "test",
+      "--predictions",
+      "E:\\a-HKU\\7506\\DASE7506-MP2-main\\.arbor\\worktrees\\v3-local-submission\\runs\\final-test-L\\predictions.json",
+      "--output",
+      "E:\\a-HKU\\7506\\DASE7506-MP2-main\\.arbor\\worktrees\\v3-local-submission\\runs\\final-test-L\\score.json"
+    ]
+  ],
+  "inference_assets": {
+    "config.json": {
+      "bytes": 193,
+      "sha256": "bbcd6cab9b7e40e649b4e160c1a9726a7f89ae1d0d2dc90fa9d4c05f5aefd6cf"
+    },
+    "weights.npz": {
+      "bytes": 8964,
+      "sha256": "9f696058356824d098ffabe5a069dcbf43d6cf1a7861d087dc0af793931033b2"
+    }
+  },
+  "inference_asset_bytes": 9157,
+  "source_sha256": {
+    "arithmetic_features.py": "97fd69713c7a73e513cacb1c01bc38bf6dad82dde80be746bc7492fb1c5e7e6a",
+    "common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "cross_validate.py": "d5d2abfc532cbd1bcdfb19a220518e20b6db5706409c4a47c1dc76e4a0ec9178",
+    "evaluate.py": "d2e6924651a1329d57f8e8c0d1fdaecfb557c6acb44987fe5d2fc4ad13a75f4e",
+    "predict.py": "e7a627fbdc9ef8d4ab3189a6fa5ac02d56ae703ccd1a81507aea0bd66e042162",
+    "quantity_flow_features.py": "4b89d26a11a2663c8da87c7dd41d7c9add624229e978fd75df037ec232609464",
+    "question_operation_features.py": "eb75e1b07839c0040823eada031fbca5adbd5e6f452784985aa4bc0f33166238",
+    "score_predictions.py": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960",
+    "selection_utils.py": "3eb0900df892afd59776f11e3e4c1dce5d34fb969acaef681a5bdb39d98bbb14",
+    "submission.py": "186c53317db45eca4abac3ab481224709df829934bfb73215d0b619e87ca72ac",
+    "submission_answer_groups.py": "0d04292529bad27d643585560da52a546501747f54eccaae515df9a0b7472136",
+    "submission_ensemble.py": "372f89d67e7b35f579b354aabd6d56d8baf28b1d1de21bf01839344797037948",
+    "submission_question_operations.py": "7df31d4b4f6034169fb01f18d8827a1d5ddeefd415033f1ac8d2a95bd3fa871e",
+    "train.py": "a740b3ca65752c9bfd23f022109860c689b109daebc066c88b9a89ea65e4432c",
+    "train_surface.py": "863ccf7873ab5075dcc955f0e80257d6650993b569b00d1c09fb715329a32629"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "date_utc_plus_8": "2026-10-26",
+  "source_records": [
+    {
+      "id": "E1",
+      "local_record": "guide/GUIDE.md",
+      "sha256": "7b4ab87265040f407854cdfb9860887f722008d24e03fffe311f99c2f2065130",
+      "verification": "Opened and cross-checked by Codex; accountable author review remains separate"
+    },
+    {
+      "id": "E2",
+      "local_record": "research_v3/quantity_flow/evidence.json",
+      "sha256": "37037daff727a47d7d52ca2d635ab436780ab32f78323205cdf16305e675208a",
+      "verification": "Opened and cross-checked by Codex; accountable author review remains separate"
+    },
+    {
+      "id": "E3",
+      "local_record": "research_v3/arithmetic_confirmation/ROUND_SUMMARY.json",
+      "sha256": "39ad14dc0bcff42e30e30ff9067957dd54b7014c97435ba8ca23d6cee0fb4814",
+      "verification": "Opened and cross-checked by Codex; accountable author review remains separate"
+    },
+    {
+      "id": "E4",
+      "local_record": "research_v3/reliability_analysis/evidence.json",
+      "sha256": "4efebe27de46d7b20100bcfada56b870ff41c3806a739866b45b2b817df06223",
+      "verification": "Opened and cross-checked by Codex; accountable author review remains separate"
+    },
+    {
+      "id": "E5",
+      "local_record": "research_v3/final_submission/test_score.json",
+      "sha256": "9970e007fcc3d63d82cf87d8b0ee4a92f0a79cfc545f561cda20037ace7d8caf",
+      "verification": "Opened and cross-checked by Codex; accountable author review remains separate"
+    },
+    {
+      "id": "E6",
+      "local_record": "research_v3/submission_reproduction/ROUND_SUMMARY.json",
+      "sha256": "aa6807b124b9f1000e898545e13d62ad6b6b9ac63319913023a33fad9c718f81",
+      "verification": "Opened and cross-checked by Codex; accountable author review remains separate"
+    },
+    {
+      "id": "E7",
+      "local_record": "research_v3/final_submission/report_evidence_review.json",
+      "sha256": "77fc97ed07b8d4b67c2b6757992dbbe2f5a22f97fa50df3456878e2719be3a4b",
+      "verification": "Opened and cross-checked by Codex; accountable author review remains separate"
+    }
+  ],
+  "report_file": "report/MP2_Report.pdf",
+  "report_sha256": "3ad462a5ec083d55bfd8d5aa41e58f06c2291f465d3e89a9b2d6b5b0c0347d32",
+  "report_pages": 7,
+  "student_name": "Wu Houlin",
+  "student_id": "3036863317",
+  "reference_metadata_verified_from_primary_pages": [
+    "https://github.com/xudongwu-0/DASE7506-MP2/blob/main/guide/GUIDE.md",
+    "https://arxiv.org/abs/2110.14168",
+    "https://proceedings.mlr.press/v202/gao23f.html",
+    "https://arxiv.org/abs/2305.20050",
+    "https://arxiv.org/abs/2609.00065"
+  ],
+  "table_provenance": {
+    "Task populations": "E1,E3",
+    "Core ablations": "E2 and supplementary exact OOF reproduction",
+    "Confirmation": "E3",
+    "Extensions": "results/research_registry.json",
+    "Confidence": "E4",
+    "Resources and final test": "E5,E6 and results/test_measurement.json"
+  },
+  "human_author_review": "The student remains responsible for reading the report and code before creating the final course submission issue.",
+  "selected_inference_and_checkpoint_unchanged_after_final_test": true
+}

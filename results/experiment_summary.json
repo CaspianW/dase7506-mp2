@@ -1,0 +1,847 @@
+{
+  "student_name": "Wu Houlin",
+  "student_id": "3036863317",
+  "selected_variant": "local_arithmetic",
+  "core_development": {
+    "S": {
+      "pooled": {
+        "overall": {
+          "correct": 3505,
+          "n": 3804,
+          "accuracy": 92.13985278654049
+        },
+        "disagreement": {
+          "correct": 1392,
+          "n": 1691,
+          "accuracy": 82.31815493790657
+        }
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "metrics": {
+            "overall": {
+              "correct": 691,
+              "n": 761,
+              "accuracy": 90.80157687253613
+            },
+            "disagreement": {
+              "correct": 268,
+              "n": 338,
+              "accuracy": 79.28994082840237
+            }
+          }
+        },
+        {
+          "fold": 1,
+          "metrics": {
+            "overall": {
+              "correct": 717,
+              "n": 761,
+              "accuracy": 94.21813403416557
+            },
+            "disagreement": {
+              "correct": 294,
+              "n": 338,
+              "accuracy": 86.98224852071006
+            }
+          }
+        },
+        {
+          "fold": 2,
+          "metrics": {
+            "overall": {
+              "correct": 708,
+              "n": 761,
+              "accuracy": 93.03547963206307
+            },
+            "disagreement": {
+              "correct": 285,
+              "n": 338,
+              "accuracy": 84.31952662721893
+            }
+          }
+        },
+        {
+          "fold": 3,
+          "metrics": {
+            "overall": {
+              "correct": 707,
+              "n": 761,
+              "accuracy": 92.90407358738501
+            },
+            "disagreement": {
+              "correct": 285,
+              "n": 339,
+              "accuracy": 84.070796460177
+            }
+          }
+        },
+        {
+          "fold": 4,
+          "metrics": {
+            "overall": {
+              "correct": 682,
+              "n": 760,
+              "accuracy": 89.73684210526316
+            },
+            "disagreement": {
+              "correct": 260,
+              "n": 338,
+              "accuracy": 76.92307692307692
+            }
+          }
+        }
+      ]
+    },
+    "format_only": {
+      "pooled": {
+        "overall": {
+          "correct": 3509,
+          "n": 3804,
+          "accuracy": 92.24500525762356
+        },
+        "disagreement": {
+          "correct": 1396,
+          "n": 1691,
+          "accuracy": 82.55470136014193
+        }
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "metrics": {
+            "overall": {
+              "correct": 692,
+              "n": 761,
+              "accuracy": 90.93298291721419
+            },
+            "disagreement": {
+              "correct": 269,
+              "n": 338,
+              "accuracy": 79.58579881656804
+            }
+          }
+        },
+        {
+          "fold": 1,
+          "metrics": {
+            "overall": {
+              "correct": 718,
+              "n": 761,
+              "accuracy": 94.34954007884363
+            },
+            "disagreement": {
+              "correct": 295,
+              "n": 338,
+              "accuracy": 87.27810650887574
+            }
+          }
+        },
+        {
+          "fold": 2,
+          "metrics": {
+            "overall": {
+              "correct": 710,
+              "n": 761,
+              "accuracy": 93.29829172141919
+            },
+            "disagreement": {
+              "correct": 287,
+              "n": 338,
+              "accuracy": 84.91124260355029
+            }
+          }
+        },
+        {
+          "fold": 3,
+          "metrics": {
+            "overall": {
+              "correct": 706,
+              "n": 761,
+              "accuracy": 92.77266754270697
+            },
+            "disagreement": {
+              "correct": 284,
+              "n": 339,
+              "accuracy": 83.77581120943952
+            }
+          }
+        },
+        {
+          "fold": 4,
+          "metrics": {
+            "overall": {
+              "correct": 683,
+              "n": 760,
+              "accuracy": 89.86842105263158
+            },
+            "disagreement": {
+              "correct": 261,
+              "n": 338,
+              "accuracy": 77.2189349112426
+            }
+          }
+        }
+      ]
+    },
+    "local_arithmetic": {
+      "pooled": {
+        "overall": {
+          "correct": 3523,
+          "n": 3804,
+          "accuracy": 92.6130389064143
+        },
+        "disagreement": {
+          "correct": 1410,
+          "n": 1691,
+          "accuracy": 83.3826138379657
+        }
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "metrics": {
+            "overall": {
+              "correct": 693,
+              "n": 761,
+              "accuracy": 91.06438896189225
+            },
+            "disagreement": {
+              "correct": 270,
+              "n": 338,
+              "accuracy": 79.88165680473372
+            }
+          }
+        },
+        {
+          "fold": 1,
+          "metrics": {
+            "overall": {
+              "correct": 720,
+              "n": 761,
+              "accuracy": 94.61235216819973
+            },
+            "disagreement": {
+              "correct": 297,
+              "n": 338,
+              "accuracy": 87.8698224852071
+            }
+          }
+        },
+        {
+          "fold": 2,
+          "metrics": {
+            "overall": {
+              "correct": 712,
+              "n": 761,
+              "accuracy": 93.5611038107753
+            },
+            "disagreement": {
+              "correct": 289,
+              "n": 338,
+              "accuracy": 85.50295857988165
+            }
+          }
+        },
+        {
+          "fold": 3,
+          "metrics": {
+            "overall": {
+              "correct": 713,
+              "n": 761,
+              "accuracy": 93.69250985545335
+            },
+            "disagreement": {
+              "correct": 291,
+              "n": 339,
+              "accuracy": 85.84070796460178
+            }
+          }
+        },
+        {
+          "fold": 4,
+          "metrics": {
+            "overall": {
+              "correct": 685,
+              "n": 760,
+              "accuracy": 90.13157894736842
+            },
+            "disagreement": {
+              "correct": 263,
+              "n": 338,
+              "accuracy": 77.81065088757397
+            }
+          }
+        }
+      ]
+    },
+    "quantity_bag": {
+      "pooled": {
+        "overall": {
+          "correct": 3522,
+          "n": 3804,
+          "accuracy": 92.58675078864353
+        },
+        "disagreement": {
+          "correct": 1409,
+          "n": 1691,
+          "accuracy": 83.32347723240686
+        }
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "metrics": {
+            "overall": {
+              "correct": 696,
+              "n": 761,
+              "accuracy": 91.45860709592641
+            },
+            "disagreement": {
+              "correct": 273,
+              "n": 338,
+              "accuracy": 80.76923076923077
+            }
+          }
+        },
+        {
+          "fold": 1,
+          "metrics": {
+            "overall": {
+              "correct": 716,
+              "n": 761,
+              "accuracy": 94.08672798948751
+            },
+            "disagreement": {
+              "correct": 293,
+              "n": 338,
+              "accuracy": 86.68639053254438
+            }
+          }
+        },
+        {
+          "fold": 2,
+          "metrics": {
+            "overall": {
+              "correct": 711,
+              "n": 761,
+              "accuracy": 93.42969776609723
+            },
+            "disagreement": {
+              "correct": 288,
+              "n": 338,
+              "accuracy": 85.20710059171597
+            }
+          }
+        },
+        {
+          "fold": 3,
+          "metrics": {
+            "overall": {
+              "correct": 712,
+              "n": 761,
+              "accuracy": 93.5611038107753
+            },
+            "disagreement": {
+              "correct": 290,
+              "n": 339,
+              "accuracy": 85.54572271386431
+            }
+          }
+        },
+        {
+          "fold": 4,
+          "metrics": {
+            "overall": {
+              "correct": 687,
+              "n": 760,
+              "accuracy": 90.39473684210526
+            },
+            "disagreement": {
+              "correct": 265,
+              "n": 338,
+              "accuracy": 78.40236686390533
+            }
+          }
+        }
+      ]
+    },
+    "canonical_order": {
+      "pooled": {
+        "overall": {
+          "correct": 3527,
+          "n": 3804,
+          "accuracy": 92.71819137749738
+        },
+        "disagreement": {
+          "correct": 1414,
+          "n": 1691,
+          "accuracy": 83.61916026020107
+        }
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "metrics": {
+            "overall": {
+              "correct": 697,
+              "n": 761,
+              "accuracy": 91.59001314060447
+            },
+            "disagreement": {
+              "correct": 274,
+              "n": 338,
+              "accuracy": 81.06508875739645
+            }
+          }
+        },
+        {
+          "fold": 1,
+          "metrics": {
+            "overall": {
+              "correct": 715,
+              "n": 761,
+              "accuracy": 93.95532194480946
+            },
+            "disagreement": {
+              "correct": 292,
+              "n": 338,
+              "accuracy": 86.3905325443787
+            }
+          }
+        },
+        {
+          "fold": 2,
+          "metrics": {
+            "overall": {
+              "correct": 714,
+              "n": 761,
+              "accuracy": 93.82391590013141
+            },
+            "disagreement": {
+              "correct": 291,
+              "n": 338,
+              "accuracy": 86.09467455621302
+            }
+          }
+        },
+        {
+          "fold": 3,
+          "metrics": {
+            "overall": {
+              "correct": 712,
+              "n": 761,
+              "accuracy": 93.5611038107753
+            },
+            "disagreement": {
+              "correct": 290,
+              "n": 339,
+              "accuracy": 85.54572271386431
+            }
+          }
+        },
+        {
+          "fold": 4,
+          "metrics": {
+            "overall": {
+              "correct": 689,
+              "n": 760,
+              "accuracy": 90.65789473684211
+            },
+            "disagreement": {
+              "correct": 267,
+              "n": 338,
+              "accuracy": 78.99408284023669
+            }
+          }
+        }
+      ]
+    },
+    "temporal_order": {
+      "pooled": {
+        "overall": {
+          "correct": 3522,
+          "n": 3804,
+          "accuracy": 92.58675078864353
+        },
+        "disagreement": {
+          "correct": 1409,
+          "n": 1691,
+          "accuracy": 83.32347723240686
+        }
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "metrics": {
+            "overall": {
+              "correct": 699,
+              "n": 761,
+              "accuracy": 91.85282522996057
+            },
+            "disagreement": {
+              "correct": 276,
+              "n": 338,
+              "accuracy": 81.65680473372781
+            }
+          }
+        },
+        {
+          "fold": 1,
+          "metrics": {
+            "overall": {
+              "correct": 716,
+              "n": 761,
+              "accuracy": 94.08672798948751
+            },
+            "disagreement": {
+              "correct": 293,
+              "n": 338,
+              "accuracy": 86.68639053254438
+            }
+          }
+        },
+        {
+          "fold": 2,
+          "metrics": {
+            "overall": {
+              "correct": 712,
+              "n": 761,
+              "accuracy": 93.5611038107753
+            },
+            "disagreement": {
+              "correct": 289,
+              "n": 338,
+              "accuracy": 85.50295857988165
+            }
+          }
+        },
+        {
+          "fold": 3,
+          "metrics": {
+            "overall": {
+              "correct": 711,
+              "n": 761,
+              "accuracy": 93.42969776609723
+            },
+            "disagreement": {
+              "correct": 289,
+              "n": 339,
+              "accuracy": 85.25073746312684
+            }
+          }
+        },
+        {
+          "fold": 4,
+          "metrics": {
+            "overall": {
+              "correct": 684,
+              "n": 760,
+              "accuracy": 90.0
+            },
+            "disagreement": {
+              "correct": 262,
+              "n": 338,
+              "accuracy": 77.51479289940828
+            }
+          }
+        }
+      ]
+    }
+  },
+  "confirmation": {
+    "status": "complete; separately qualified local candidate frozen",
+    "original_fivefold": {
+      "S": [
+        1392,
+        1691
+      ],
+      "local_arithmetic": [
+        1410,
+        1691
+      ],
+      "gain": 18,
+      "fold_gains": [
+        2,
+        3,
+        4,
+        6,
+        3
+      ],
+      "reused_existing_fits": true
+    },
+    "grouped_fivefold": {
+      "S": [
+        1383,
+        1691
+      ],
+      "local_arithmetic": [
+        1405,
+        1691
+      ],
+      "gain": 22,
+      "fold_gains": [
+        4,
+        3,
+        2,
+        8,
+        5
+      ],
+      "fixed": 34,
+      "broken": 12
+    },
+    "training_holdout": {
+      "S": [
+        346,
+        423
+      ],
+      "local_arithmetic": [
+        347,
+        423
+      ],
+      "gain": 1,
+      "fixed": 5,
+      "broken": 4,
+      "passed": true
+    },
+    "official_validation": {
+      "S": [
+        746,
+        798
+      ],
+      "local_arithmetic": [
+        751,
+        798
+      ],
+      "gain": 5,
+      "accuracy": 94.11027568922306,
+      "passed": true
+    },
+    "grouped_fits": {
+      "S": 5,
+      "residual": 5
+    },
+    "grouped_cpu_guards": 10,
+    "coordinator_fits": {
+      "S": 2,
+      "residual": 2
+    },
+    "scored_gate_candidate_queries": 1,
+    "new_official_validation_score_calls": 2,
+    "validation_calls_detail": "1 gate check plus1 packaged reproduction",
+    "official_test_evaluations": 0,
+    "training_holdout_cpu_guards": 2,
+    "official_validation_cpu_audits": 1,
+    "original_and_packaged_validation_choices_exact": true,
+    "inference_assets_bytes": 9157,
+    "fresh_original_validation_prediction_and_scoring_seconds": 1.3341262000012648,
+    "fresh_packaged_validation_prediction_and_scoring_seconds": 1.204461000000265,
+    "timing_scope": "Local CPU timing only; reference Xeon8457C not measured",
+    "candidate": "research_v3/artifacts/local_arithmetic_v1",
+    "candidate_branch": "v3/qualified-local-arithmetic",
+    "public_model_changed": false,
+    "report_generated": false,
+    "public_baseline": "numeric-surface-baseline-v1",
+    "sources": {
+      "quantity_flow": "5ae1f48eba12bdd0d67a072e812ebbdae2a7fa50",
+      "confirmation": "cf506c58de9508464ce4370e65e09e12ff722204",
+      "coordinator": "aaa8e1f"
+    },
+    "interpretation": "Unchanged simple residual improved both development split schemes and passed the predeclared gates. The holdout gain is only1question; this does not establish a reliable population improvement. The candidate was selected after development comparisons; the training holdout and officialvalidation have prior model-selection use. No new officialtest claim.",
+    "verification": "research_v3/arithmetic_confirmation/independent_verification.json"
+  },
+  "reliability": {
+    "status": "complete; independently verified descriptive OOF analysis",
+    "date_utc_plus_8": "2026-10-25",
+    "hard_questions": 1691,
+    "L_hard_correct": 1410,
+    "S_hard_correct": 1392,
+    "gap_AUROC_for_correctness": {
+      "S": 0.8132159881597663,
+      "local_arithmetic": 0.8132833598344312
+    },
+    "L_highest_gap_coverage": [
+      {
+        "target_percent": 100,
+        "cutoff": 0.0075005819770019855,
+        "actual_percent": 100.0,
+        "n": 1691,
+        "correct": 1410,
+        "wrong": 281,
+        "accuracy": 83.3826138379657
+      },
+      {
+        "target_percent": 90,
+        "cutoff": 0.36405589331474886,
+        "actual_percent": 90.00591366055589,
+        "n": 1522,
+        "correct": 1324,
+        "wrong": 198,
+        "accuracy": 86.99080157687254
+      },
+      {
+        "target_percent": 75,
+        "cutoff": 0.9796925729150701,
+        "actual_percent": 75.04435245416913,
+        "n": 1269,
+        "correct": 1159,
+        "wrong": 110,
+        "accuracy": 91.33175728920409
+      },
+      {
+        "target_percent": 50,
+        "cutoff": 2.1677689167449987,
+        "actual_percent": 50.02956830277942,
+        "n": 846,
+        "correct": 811,
+        "wrong": 35,
+        "accuracy": 95.86288416075651
+      },
+      {
+        "target_percent": 25,
+        "cutoff": 3.9634021773286303,
+        "actual_percent": 25.01478415138971,
+        "n": 423,
+        "correct": 420,
+        "wrong": 3,
+        "accuracy": 99.29078014184397
+      },
+      {
+        "target_percent": 10,
+        "cutoff": 5.847963715822489,
+        "actual_percent": 10.053222945002958,
+        "n": 170,
+        "correct": 170,
+        "wrong": 0,
+        "accuracy": 100.0
+      }
+    ],
+    "L_fixed_gap_bins": [
+      {
+        "left": 0.0,
+        "right": 0.25,
+        "n": 115,
+        "correct": 54,
+        "wrong": 61,
+        "accuracy": 46.95652173913044
+      },
+      {
+        "left": 0.25,
+        "right": 0.5,
+        "n": 103,
+        "correct": 60,
+        "wrong": 43,
+        "accuracy": 58.25242718446602
+      },
+      {
+        "left": 0.5,
+        "right": 1.0,
+        "n": 209,
+        "correct": 142,
+        "wrong": 67,
+        "accuracy": 67.94258373205741
+      },
+      {
+        "left": 1.0,
+        "right": 2.0,
+        "n": 363,
+        "correct": 295,
+        "wrong": 68,
+        "accuracy": 81.26721763085399
+      },
+      {
+        "left": 2.0,
+        "right": 4.0,
+        "n": 482,
+        "correct": 443,
+        "wrong": 39,
+        "accuracy": 91.90871369294605
+      },
+      {
+        "left": 4.0,
+        "right": 8.0,
+        "n": 378,
+        "correct": 375,
+        "wrong": 3,
+        "accuracy": 99.2063492063492
+      },
+      {
+        "left": 8.0,
+        "right": "infinity",
+        "n": 41,
+        "correct": 41,
+        "wrong": 0,
+        "accuracy": 100.0
+      }
+    ],
+    "model_agreement": {
+      "agree": {
+        "n": 1638,
+        "both_correct": 1377,
+        "S_only_correct": 0,
+        "L_only_correct": 0,
+        "both_wrong": 261,
+        "S_accuracy": 84.06593406593407,
+        "L_accuracy": 84.06593406593407
+      },
+      "disagree": {
+        "n": 53,
+        "both_correct": 0,
+        "S_only_correct": 15,
+        "L_only_correct": 33,
+        "both_wrong": 5,
+        "S_accuracy": 28.30188679245283,
+        "L_accuracy": 62.264150943396224
+      }
+    },
+    "L_errors": 281,
+    "common_wrong": 261,
+    "common_wrong_share_of_L_errors": 0.9288256227758007,
+    "hypothetical_oracle_for_selecting_between_the_two_existing_answers": {
+      "hard_correct": 1425,
+      "n": 1691,
+      "extra_correct_over_L": 15,
+      "implementable_without_labels": false
+    },
+    "training_fits": 0,
+    "calibration_fits": 0,
+    "new_official_validation_evaluations": 0,
+    "new_official_test_evaluations": 0,
+    "interpretation": "The raw gap is informative on this development pool but is not a calibrated probability. Retaining the largest gaps raises conditional accuracy while leaving many questions unanswered, so these selective figures are not official full-bank scores. L improves selection accuracy over S, while pooled gap AUROC is almost unchanged. Both models share most errors. These post-selection OOF diagnostics do not establish independent generalization.",
+    "evidence": "research_v3/reliability_analysis/evidence.json",
+    "verification": "research_v3/reliability_analysis/independent_verification.json",
+    "public_model_changed": false,
+    "report_generated": false,
+    "same_wrong_numeric_answer_in_both_models": 261,
+    "both_models_wrong_including_different_answers": 266,
+    "common_wrong_scope": "261 identical wrong answers among agreement cases; another5disagreement cases are wrong in both models.",
+    "share_of_L_errors_also_wrong_for_S": 0.9466192170818505
+  },
+  "final_test": {
+    "protocol": "dase7506-mp2-open-hard-verifier-v5",
+    "split": "test",
+    "correct": 396,
+    "n": 467,
+    "accuracy": 84.79657387580299,
+    "scoring_seconds": 0.06877109999913955
+  },
+  "final_local_measurement": {
+    "protocol": "dase7506-mp2-open-hard-verifier-v5",
+    "split": "test",
+    "correct": 396,
+    "n": 467,
+    "accuracy": 84.79657387580299,
+    "scoring_seconds": 0.06877109999913955,
+    "external_prediction_seconds": 1.1832521999967867,
+    "external_scoring_seconds": 0.199391200003447,
+    "external_total_seconds": 1.3826434000002337,
+    "reference_cpu_measurement": false,
+    "inference_asset_bytes": 9157,
+    "cpu_numeric_threads_limit": 4,
+    "predictions_sha256": "c3379267c49e48134c9a194b81c6dbc72eee8179ec6d19e52be0878ac733d0b3",
+    "official_score_sha256": "9970e007fcc3d63d82cf87d8b0ee4a92f0a79cfc545f561cda20037ace7d8caf",
+    "timing_includes_startup_imports_loading_preprocessing": true
+  },
+  "reference_CPU_measured": false
+}

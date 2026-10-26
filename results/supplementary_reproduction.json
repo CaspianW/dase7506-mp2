@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "added_entry_points": "Reproduction utilities for already frozen pre-test controls and existing OOF statistics only",
+  "selected_inference_and_checkpoint_changed": false,
+  "control_model_fits": 15,
+  "control_OOF_scores_exact": {
+    "group_only_C1028": true,
+    "S": true,
+    "format_only": true
+  },
+  "reliability_statistics_exact": true,
+  "official_test_used_for_reproduction_utilities": false
+}
