@@ -4,9 +4,9 @@
   "accuracy": 84.79657387580299,
   "correct": 396,
   "n": 467,
-  "code_url": "https://github.com/CaspianW/dase7506-mp2/tree/mp2-final-v2",
-  "checkpoint_url": "https://github.com/CaspianW/dase7506-mp2/releases/download/mp2-final-v2/local-arithmetic-v2-checkpoint.zip",
-  "report_url": "https://github.com/CaspianW/dase7506-mp2/blob/mp2-final-v2/report/MP2_Report.pdf",
+  "code_url": "https://github.com/CaspianW/dase7506-mp2/tree/mp2-final-v2.1",
+  "checkpoint_url": "https://github.com/CaspianW/dase7506-mp2/releases/download/mp2-final-v2.1/local-arithmetic-v2-checkpoint.zip",
+  "report_url": "https://github.com/CaspianW/dase7506-mp2/blob/mp2-final-v2.1/report/MP2_Report.pdf",
   "submission_website": "https://xudongwu-0.github.io/courses/dase7506/mp2/",
   "course_issue_created": false,
   "final_action": "Use the official website to prepare the submission, then create its GitHub issue. Publishing this repository alone does not submit coursework."

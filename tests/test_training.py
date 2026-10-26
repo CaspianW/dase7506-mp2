@@ -1,5 +1,6 @@
 """Synthetic reproduction checks; no supplied data or actual optimization."""
 
+import argparse
 import copy
 from itertools import permutations
 import json
@@ -145,6 +146,10 @@ class ReproductionTests(unittest.TestCase):
 
 
 if __name__=='__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', type=Path, default=ROOT/'runs/checks/prefit_checks.json',
+                        help='Write this run receipt outside the archived results directory.')
+    args = parser.parse_args()
     with (patch('sklearn.linear_model.LogisticRegression.fit',side_effect=AssertionError('No classifier fits')),
           patch('train.minimize',side_effect=AssertionError('No optimizer calls')),
           patch('train.load_training_rows',side_effect=AssertionError('No supplied data')),
@@ -152,7 +157,8 @@ if __name__=='__main__':
           patch('common.load_inputs',side_effect=AssertionError('No input loads'))):
         result=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(ReproductionTests))
     if result.wasSuccessful():
-        (ROOT/'results/prefit_checks.json').write_text(json.dumps({'passed':True,'tests':result.testsRun,
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps({'passed':True,'tests':result.testsRun,
             'explicit_mock_optimizer_calls':ReproductionTests.mocked_residual_calls,'actual_model_fits':0,
             'supplied_inputs_loaded':False,'reference_rows_decoded':0,
             'source_sha256':{str(p.relative_to(ROOT)):sha(p) for p in sorted((ROOT/'src').glob('*.py'))},

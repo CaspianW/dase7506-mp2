@@ -1,5 +1,5 @@
 {
-  "date_utc_plus_8": "2026-10-26",
+  "date_utc_plus_8": "2026-10-27",
   "source_records": [
     {
       "id": "E1",
@@ -45,7 +45,7 @@
     }
   ],
   "report_file": "report/MP2_Report.pdf",
-  "report_sha256": "3ad462a5ec083d55bfd8d5aa41e58f06c2291f465d3e89a9b2d6b5b0c0347d32",
+  "report_sha256": "4ca349ba7920243911e4fff20bf4b439010ecc1d546f66288b289882e3e9ef08",
   "report_pages": 7,
   "student_name": "Wu Houlin",
   "student_id": "3036863317",
@@ -64,6 +64,7 @@
     "Confidence": "E4",
     "Resources and final test": "E5,E6 and results/test_measurement.json"
   },
-  "human_author_review": "The student remains responsible for reading the report and code before creating the final course submission issue.",
-  "selected_inference_and_checkpoint_unchanged_after_final_test": true
+  "human_author_review": "Automated review completed; the student remains responsible for understanding and reviewing the report and code.",
+  "selected_inference_and_checkpoint_unchanged_after_final_test": true,
+  "revision_review": "results/review.json"
 }

@@ -1,0 +1,93 @@
+{
+  "date_utc_plus_8": "2026-10-27",
+  "reviewed_base_commit": "c197a77518ef65c052b1497dd474648a3ad85438",
+  "review_release": "mp2-final-v2.1",
+  "reviewer": "OpenAI Codex-assisted review; not independent human review",
+  "change_log": "report/review_changes.md",
+  "model_or_feature_changes": false,
+  "training_recipe_changes": false,
+  "checkpoint_sha256": {
+    "config.json": "bbcd6cab9b7e40e649b4e160c1a9726a7f89ae1d0d2dc90fa9d4c05f5aefd6cf",
+    "weights.npz": "9f696058356824d098ffabe5a069dcbf43d6cf1a7861d087dc0af793931033b2"
+  },
+  "frozen_source_files_changed": [
+    "src/evaluate.py"
+  ],
+  "wrapper_change_scope": "Expose child-process errors; successful predictor/scorer invocation unchanged",
+  "existing_synthetic_tests_passed": 6,
+  "new_subprocess_tests_passed": 2,
+  "end_to_end_missing_data_diagnostic_passed": true,
+  "historical_test_receipt_unchanged": true,
+  "core_table_counts_match_records": true,
+  "confidence_subset_counts_match_records": true,
+  "both_wrong_total": 266,
+  "same_wrong_answer_count": 261,
+  "full_training_reproduction": {
+    "rows": 4755,
+    "fits": {
+      "S": 1,
+      "residual": 1
+    },
+    "fit_seconds": 10.27712359999714,
+    "checkpoint_bytes_identical": true
+  },
+  "validation_reproduction": {
+    "protocol": "dase7506-mp2-open-hard-verifier-v5",
+    "split": "validation",
+    "correct": 751,
+    "n": 798,
+    "accuracy": 94.11027568922306,
+    "scoring_seconds": 0.09120280000206549,
+    "external_prediction_seconds": 1.1580587999997078,
+    "external_scoring_seconds": 0.22744439999951283,
+    "external_total_seconds": 1.3855031999992207,
+    "reference_cpu_measurement": false,
+    "inference_asset_bytes": 9157,
+    "cpu_numeric_threads_limit": 4,
+    "predictions_sha256": "280a81bec4d8167bc6a369d58972acd446fc016e391a491eff86582669f20df3",
+    "official_score_sha256": "d48db4696818a7180d2aee3618b6ce1cd927356cccc20be9e4730f071710c73e",
+    "timing_includes_startup_imports_loading_preprocessing": true
+  },
+  "test_reproduction": {
+    "protocol": "dase7506-mp2-open-hard-verifier-v5",
+    "split": "test",
+    "correct": 396,
+    "n": 467,
+    "accuracy": 84.79657387580299,
+    "scoring_seconds": 0.02369390000239946,
+    "external_prediction_seconds": 0.7789426999952411,
+    "external_scoring_seconds": 0.1696938000022783,
+    "external_total_seconds": 0.9486364999975194,
+    "reference_cpu_measurement": false,
+    "inference_asset_bytes": 9157,
+    "cpu_numeric_threads_limit": 4,
+    "predictions_sha256": "78f194ac779955b1df27c1e914cbde41f37f219ea877b6c9b5f3c792b4ff65b4",
+    "official_score_sha256": "b9bacd300a5378016dc1de5a07a18fa1e6eb1f39c5efbec7c43c3ec720b61b59",
+    "timing_includes_startup_imports_loading_preprocessing": true
+  },
+  "test_prediction_fields_identical": {
+    "protocol": true,
+    "split": true,
+    "ids": true,
+    "selected": true
+  },
+  "test_calls_in_this_review": 1,
+  "test_error_analysis_performed": false,
+  "test_used_for_model_selection": false,
+  "report": {
+    "pages": 7,
+    "sha256": "4ca349ba7920243911e4fff20bf4b439010ecc1d546f66288b289882e3e9ef08",
+    "all_pages_rendered_and_visually_checked": true,
+    "out_of_page_text_bounds": 0,
+    "markdown_sha256": "77d4a8bd9ce7f83abc8823bdb6a1022b0b626593e76f73df28c4191e44785c27"
+  },
+  "references_checked": [
+    "https://github.com/xudongwu-0/DASE7506-MP2/blob/main/guide/GUIDE.md",
+    "https://arxiv.org/abs/2110.14168",
+    "https://proceedings.mlr.press/v202/gao23f.html",
+    "https://arxiv.org/abs/2305.20050",
+    "https://arxiv.org/abs/2609.00065"
+  ],
+  "reference_cpu_measured": false,
+  "course_issue_created": false
+}

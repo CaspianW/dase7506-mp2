@@ -4,14 +4,13 @@ import argparse
 import html
 from pathlib import Path
 import re
-import textwrap
 
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_LEFT
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.platypus import (SimpleDocTemplate, Paragraph, Spacer, PageBreak,
-    Preformatted, Table, TableStyle, KeepTogether)
+    Preformatted, Table, TableStyle)
 
 NAVY=colors.HexColor('#19364D')
 INK=colors.HexColor('#17212B')
@@ -64,8 +63,8 @@ def main():
         if line.startswith('```'):
             i+=1;block=[]
             while i<len(lines) and not lines[i].strip().startswith('```'):
-                block.extend(textwrap.wrap(lines[i],width=87,replace_whitespace=False,
-                    drop_whitespace=False,break_long_words=False,break_on_hyphens=False) or [''])
+                # Preserve command line breaks and explicit shell continuations.
+                block.append(lines[i])
                 i+=1
             story.append(Preformatted('\n'.join(block),styles['CodeReport']));i+=1;continue
         if line.startswith('|'):
@@ -103,7 +102,7 @@ def main():
         canvas.line(52,A4[1]-32,A4[0]-52,A4[1]-32)
         canvas.setFont('Helvetica',7.5);canvas.setFillColor(MUTED)
         canvas.drawString(52,A4[1]-24,'DASE7506 | Mini-project 2 | Wu Houlin')
-        canvas.drawString(52,25,'3036863317 | 26 October 2026')
+        canvas.drawString(52,25,'3036863317 | Revised 27 October 2026')
         canvas.drawRightString(A4[0]-52,25,f'{doc.page}')
         canvas.restoreState()
     doc=SimpleDocTemplate(str(args.output),pagesize=A4,rightMargin=52,leftMargin=52,

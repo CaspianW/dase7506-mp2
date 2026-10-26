@@ -6,6 +6,8 @@ The final method is the local-arithmetic selector **L**: a numeric-answer-group 
 
 The [seven-page report](report/MP2_Report.pdf) explains the method, controls, failed extensions, reliability findings, costs and limitations. [Markdown source](report/report.md) and [PDF build script](report/build_report.py) are included. The course leaderboard issue is created separately through the MP2 website; publishing this repository alone does not submit the assignment.
 
+The 27 October review corrected the reproduction instructions, clarified the report and fixed two reporting issues in the supporting scripts. [Review changes](report/review_changes.md) lists the changes and checks. The selected model, feature extraction and checkpoint are unchanged.
+
 ## Files
 
 ```text
@@ -38,7 +40,7 @@ On Linux or macOS, use `.venv/bin/python`. Data are in `upstream/code/data` and 
 .venv\Scripts\python.exe -B src/evaluate.py --data-dir upstream/code/data --split test --output runs/test
 ```
 
-This runs the official predictor and independent scorer in separate fresh processes, then records the exact score, commands, hashes and external wall time. It includes startup, imports, asset/input loading, preprocessing and scoring. The frozen result is in [results/test_score.json](results/test_score.json); measured local resources are in [results/test_measurement.json](results/test_measurement.json).
+This runs the official predictor and scorer in separate fresh processes, then records the score, commands, hashes and external wall time. Timing includes startup, imports, asset/input loading, preprocessing and scoring. If either process fails, the wrapper displays its error output. The frozen result is in [results/test_score.json](results/test_score.json); measured local resources are in [results/test_measurement.json](results/test_measurement.json).
 
 Validation reproduction:
 
@@ -59,6 +61,7 @@ Use a fresh output directory each time. Inference accepts the caller's bank and 
 ```powershell
 .venv\Scripts\python.exe -m pip install -r requirements-train.txt
 .venv\Scripts\python.exe -B tests/test_training.py
+.venv\Scripts\python.exe -B tests/test_evaluate.py
 .venv\Scripts\python.exe -B src/train.py --data-dir upstream/code/data --output runs/retrained
 .venv\Scripts\python.exe -B src/cross_validate.py --data-dir upstream/code/data --output runs/cv
 .venv\Scripts\python.exe -B src/reproduce_controls.py --data-dir upstream/code/data --output runs/controls
@@ -69,9 +72,17 @@ Full training uses only the 4,755 supplied training questions. S is a no-interce
 
 The residual minimizes weighted mean logistic loss plus `0.005 * ||v||^2`, starts at zero and uses L-BFGS-B with `maxiter=2000`, `ftol=1e-12`, `gtol=1e-6` and `maxls=40`. Dependencies are pinned: NumPy 2.3.5, SciPy 1.16.3, scikit-learn 1.7.2 and threadpoolctl 3.6.0. Split/CV seeds are 20261021/20261022; the split protocol is saved in `results/protocol.json`.
 
-The retrained model is in `runs/retrained/checkpoint`. Pair audits, scalers, initial/final coefficients, objectives, gradients and fitting provenance are retained in that run. A clean full training run reproduced both final checkpoint files byte for byte. All S/L five-fold scores and 50 associated fold-array artifacts matched the original records exactly. The C1028/S/format-only utilities also reproduced every archived OOF score exactly; the reliability utility reproduced its audited statistics.
+The retrained model is in `runs/retrained/checkpoint`. Evaluate that model explicitly with:
 
-`results/research_registry.json` preserves compact historical recipes/results and their source hashes. Other exploratory extensions are documented there and in the report; their large local worktrees are not copied into this repository. These utilities reproduce fixed prior methods and do not conduct another model search.
+```powershell
+.venv\Scripts\python.exe -B src/evaluate.py --data-dir upstream/code/data --split test --checkpoint runs/retrained/checkpoint --output runs/retrained-test
+```
+
+Without `--checkpoint`, evaluation uses the distributed `checkpoint/`, even if training has just finished. Training retains pair records, scalers, coefficients, objectives and gradients in its output directory. The synthetic checks write a new receipt to `runs/checks/prefit_checks.json`; they do not overwrite the historical receipt in `results/`.
+
+A clean full training run reproduced both final checkpoint files byte for byte. All S/L five-fold scores and 50 associated fold-array artifacts matched the original records exactly. The C1028/S/format-only utilities also reproduced every archived OOF score exactly, and the reliability utility reproduced its recorded statistics. These comparisons were made by automated verification scripts with Codex assistance.
+
+`results/research_registry.json` contains historical experiment summaries, configuration details and source hashes. Full implementations and raw runs for the other exploratory extensions remain local, so those extensions cannot all be rerun from this package alone. Historical records such as `source_provenance.json` describe their original snapshot stage; fields such as `report_generated: false` are not the current submission status. Use `SUBMISSION.json` for the current artifact links.
 
 ## Recorded results
 
@@ -83,7 +94,7 @@ The retrained model is in `runs/retrained/checkpoint`. Pair audits, scalers, ini
 | Official validation | 751/798 | Complete validation bank |
 | Official test | **396/467** | Complete test bank |
 
-The holdout gain over S was one question. Repeated development/validation comparisons and historical aggregate test exposure limit independent-generalization claims. Score-gap subset accuracy is descriptive and cannot replace complete-bank evaluation. The task grades the selected final number, not the validity of every reasoning step.
+The holdout gain over S was one question. Development and validation were reused across experiments, and aggregate test scores from earlier baselines were already known. These limitations matter when interpreting the result beyond this course bank. Score-gap subset accuracy describes only the retained questions and cannot replace complete-bank evaluation. The task grades the selected final number, not the validity of every reasoning step.
 
 ## Rebuild the report
 
@@ -98,4 +109,4 @@ Report dependencies are optional and are not imported by inference. The supplied
 
 The bank, numeric parser, predictor and scorer come from the [official course repository](https://github.com/xudongwu-0/DASE7506-MP2). Questions/references derive from GSM8K; candidate solutions and supplied representations were prepared with Qwen3-0.6B. Notices remain in `licenses/`. No external training datasets or additional pretrained weights are used.
 
-OpenAI Codex provided substantive assistance with planning, implementation, experiment execution, audits, packaging and report drafting. Local Scientific Agent Skills workflows supported the checks and are acknowledged in the report. The student remains responsible for understanding and reviewing the work. The final freeze and exact asset hashes are recorded in `results/final_selection.json` and the release manifest.
+OpenAI Codex provided substantive assistance with experimental design, code, execution, verification scripts and report drafting and revision. Local Scientific Agent Skills workflows supported the checks, and Humanizer instructions supported language editing. The student remains responsible for understanding and reviewing the work. The model freeze and asset hashes are recorded in `results/final_selection.json` and the release manifest.

@@ -15,6 +15,20 @@ def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+def run_stage(command, env, cwd, stage):
+    """Measure one child process and show its diagnostics if it fails."""
+    start = time.perf_counter()
+    completed = subprocess.run(command, env=env, cwd=cwd, capture_output=True, text=True)
+    elapsed = time.perf_counter() - start
+    if completed.returncode:
+        print(f'{stage} failed (exit {completed.returncode}).', file=sys.stderr)
+        for diagnostic in (completed.stdout, completed.stderr):
+            if diagnostic:
+                print(diagnostic.rstrip(), file=sys.stderr)
+        raise SystemExit(completed.returncode)
+    return elapsed
+
+
 def main():
     root = Path(__file__).resolve().parent.parent
     parser = argparse.ArgumentParser(description=__doc__)
@@ -46,10 +60,8 @@ def main():
         'source_sha256': {p.name: sha(p) for p in sorted((root / 'src').glob('*.py'))}}
     (args.output / 'receipt.json').write_text(json.dumps(before, indent=2) + '\n', encoding='utf-8')
     timings = []
-    for command in commands:
-        start = time.perf_counter()
-        subprocess.run(command, env=env, cwd=root, check=True, capture_output=True, text=True)
-        timings.append(time.perf_counter() - start)
+    for stage, command in zip(('Prediction', 'Scoring'), commands):
+        timings.append(run_stage(command, env, root, stage))
     result = json.loads(score.read_text(encoding='utf-8'))
     result.update(external_prediction_seconds=timings[0], external_scoring_seconds=timings[1],
                   external_total_seconds=sum(timings), reference_cpu_measurement=False,
